@@ -196,7 +196,19 @@
     <Compile Include="reporting.Designer.cs">
       <DependentUpon>reporting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="row.cs" />
+    <Compile Include="so7t.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="so7t.Designer.cs">
+      <DependentUpon>so7t.cs</DependentUpon>
+    </Compile>
     <Compile Include="store.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reporting.resx">
       <DependentUpon>reporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="so7t.resx">
+      <DependentUpon>so7t.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="store.resx">
       <DependentUpon>store.cs</DependentUpon>
