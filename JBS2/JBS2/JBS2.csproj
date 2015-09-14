@@ -215,6 +215,12 @@
     <Compile Include="suppliers.Designer.cs">
       <DependentUpon>suppliers.cs</DependentUpon>
     </Compile>
+    <Compile Include="test-repo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test-repo.Designer.cs">
+      <DependentUpon>test-repo.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestBills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="suppliers.resx">
       <DependentUpon>suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test-repo.resx">
+      <DependentUpon>test-repo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestBills.resx">
       <DependentUpon>TestBills.cs</DependentUpon>
