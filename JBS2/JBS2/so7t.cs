@@ -15,5 +15,12 @@ namespace JBS2
         {
             InitializeComponent();
         }
+
+        private void so7t_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'johnDataSet.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.johnDataSet.Employee);
+
+        }
     }
 }
