@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="As.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="Forms\brands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,10 +103,10 @@
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CUP.cs">
+    <Compile Include="Forms\CUP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CUP.Designer.cs">
+    <Compile Include="Forms\CUP.Designer.cs">
       <DependentUpon>CUP.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\customers.cs">
@@ -138,16 +139,16 @@
     </Compile>
     <Compile Include="End.cs" />
     <Compile Include="For.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items.cs">
+    <Compile Include="Forms\Items.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items.Designer.cs">
+    <Compile Include="Forms\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
     <Compile Include="itemsDataSet1.Designer.cs">
@@ -155,16 +156,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>itemsDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Items_Details.cs">
+    <Compile Include="Forms\Items_Details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items_Details.Designer.cs">
+    <Compile Include="Forms\Items_Details.Designer.cs">
       <DependentUpon>Items_Details.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items_show.cs">
+    <Compile Include="Forms\Items_show.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items_show.Designer.cs">
+    <Compile Include="Forms\Items_show.Designer.cs">
       <DependentUpon>Items_show.cs</DependentUpon>
     </Compile>
     <Compile Include="johnDataSet.cs">
@@ -178,16 +179,16 @@
       <DependentUpon>order.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="orders_in.cs">
+    <Compile Include="Forms\orders_in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders_in.Designer.cs">
+    <Compile Include="Forms\orders_in.Designer.cs">
       <DependentUpon>orders_in.cs</DependentUpon>
     </Compile>
-    <Compile Include="orders_out.cs">
+    <Compile Include="Forms\orders_out.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders_out.Designer.cs">
+    <Compile Include="Forms\orders_out.Designer.cs">
       <DependentUpon>orders_out.cs</DependentUpon>
     </Compile>
     <Compile Include="reporting.cs">
@@ -221,16 +222,16 @@
     <Compile Include="storereport.Designer.cs">
       <DependentUpon>storereport.cs</DependentUpon>
     </Compile>
-    <Compile Include="suppliers.cs">
+    <Compile Include="Forms\suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="suppliers.Designer.cs">
+    <Compile Include="Forms\suppliers.Designer.cs">
       <DependentUpon>suppliers.cs</DependentUpon>
     </Compile>
-    <Compile Include="test-repo.cs">
+    <Compile Include="Forms\test-repo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test-repo.Designer.cs">
+    <Compile Include="Forms\test-repo.Designer.cs">
       <DependentUpon>test-repo.cs</DependentUpon>
     </Compile>
     <Compile Include="TestBills.cs">
@@ -258,16 +259,16 @@
     <Compile Include="view.Designer.cs">
       <DependentUpon>view.cs</DependentUpon>
     </Compile>
-    <Compile Include="الموظفين.cs">
+    <Compile Include="Forms\الموظفين.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الموظفين.Designer.cs">
+    <Compile Include="Forms\الموظفين.Designer.cs">
       <DependentUpon>الموظفين.cs</DependentUpon>
     </Compile>
-    <Compile Include="عملاء وموردين.cs">
+    <Compile Include="Forms\عملاء وموردين.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="عملاء وموردين.Designer.cs">
+    <Compile Include="Forms\عملاء وموردين.Designer.cs">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
     </Compile>
     <Compile Include="johnDataSet.Designer.cs">
@@ -296,7 +297,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CUP.resx">
+    <EmbeddedResource Include="Forms\CUP.resx">
       <DependentUpon>CUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\customers.resx">
@@ -308,26 +309,26 @@
     <EmbeddedResource Include="date.resx">
       <DependentUpon>date.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items.resx">
+    <EmbeddedResource Include="Forms\Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items_Details.resx">
+    <EmbeddedResource Include="Forms\Items_Details.resx">
       <DependentUpon>Items_Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items_show.resx">
+    <EmbeddedResource Include="Forms\Items_show.resx">
       <DependentUpon>Items_show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>order.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders_in.resx">
+    <EmbeddedResource Include="Forms\orders_in.resx">
       <DependentUpon>orders_in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders_out.resx">
+    <EmbeddedResource Include="Forms\orders_out.resx">
       <DependentUpon>orders_out.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporting.resx">
@@ -345,10 +346,10 @@
     <EmbeddedResource Include="storereport.resx">
       <DependentUpon>storereport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="suppliers.resx">
+    <EmbeddedResource Include="Forms\suppliers.resx">
       <DependentUpon>suppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test-repo.resx">
+    <EmbeddedResource Include="Forms\test-repo.resx">
       <DependentUpon>test-repo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestBills.resx">
@@ -364,10 +365,10 @@
     <EmbeddedResource Include="view.resx">
       <DependentUpon>view.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الموظفين.resx">
+    <EmbeddedResource Include="Forms\الموظفين.resx">
       <DependentUpon>الموظفين.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="عملاء وموردين.resx">
+    <EmbeddedResource Include="Forms\عملاء وموردين.resx">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -458,9 +459,7 @@
   <ItemGroup>
     <None Include="Resources\Artistic-Art-Flowers-Tree-Wall-Stickers-Murals-for-Living-Room-Wall-Decorating-Designs-Ideas.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
