@@ -172,6 +172,11 @@
       <DependentUpon>johnDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="johnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>johnDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Next.cs" />
     <Compile Include="order.cs">
       <AutoGen>True</AutoGen>
@@ -270,11 +275,6 @@
     </Compile>
     <Compile Include="Forms\عملاء وموردين.Designer.cs">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
-    </Compile>
-    <Compile Include="johnDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>johnDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
