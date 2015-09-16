@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="As.cs" />
+    <Compile Include="BL\CLS_LOGIN.cs" />
     <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="Forms\brands.cs">
       <SubType>Form</SubType>
@@ -103,11 +104,11 @@
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\CUP.cs">
+    <Compile Include="Forms\log_in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CUP.Designer.cs">
-      <DependentUpon>CUP.cs</DependentUpon>
+    <Compile Include="Forms\log_in.Designer.cs">
+      <DependentUpon>log_in.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\customers.cs">
       <SubType>Form</SubType>
@@ -139,11 +140,11 @@
     </Compile>
     <Compile Include="End.cs" />
     <Compile Include="For.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Main_page.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Items.cs">
       <SubType>Form</SubType>
@@ -297,8 +298,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CUP.resx">
-      <DependentUpon>CUP.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\log_in.resx">
+      <DependentUpon>log_in.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\customers.resx">
       <DependentUpon>customers.cs</DependentUpon>
@@ -310,7 +311,7 @@
       <DependentUpon>date.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
