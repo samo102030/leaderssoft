@@ -71,7 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="As.cs" />
     <Compile Include="BL\CLS_LOGIN.cs" />
     <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="PL\brands.cs">
@@ -80,25 +79,25 @@
     <Compile Include="PL\brands.Designer.cs">
       <DependentUpon>brands.cs</DependentUpon>
     </Compile>
-    <Compile Include="crv.cs">
+    <Compile Include="Reports\crv.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crv.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="Reports\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport2.cs">
+    <Compile Include="Reports\CrystalReport2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport3.cs">
+    <Compile Include="Reports\CrystalReport3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
@@ -122,40 +121,23 @@
     <Compile Include="PL\datagride.Designer.cs">
       <DependentUpon>datagride.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridView1.cs" />
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="date.cs">
+    <Compile Include="PL\date.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="date.Designer.cs">
+    <Compile Include="PL\date.Designer.cs">
       <DependentUpon>date.cs</DependentUpon>
     </Compile>
-    <Compile Include="End.cs" />
-    <Compile Include="For.cs" />
-    <Compile Include="PL\Main_page.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form1.Designer.cs">
-      <DependentUpon>Main_page.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Items.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
-    </Compile>
-    <Compile Include="itemsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="PL\Items_Details.cs">
       <SubType>Form</SubType>
@@ -178,8 +160,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>johnDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Next.cs" />
-    <Compile Include="order.cs">
+    <Compile Include="Reports\order.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>order.rpt</DependentUpon>
@@ -197,10 +178,10 @@
     <Compile Include="PL\orders_out.Designer.cs">
       <DependentUpon>orders_out.cs</DependentUpon>
     </Compile>
-    <Compile Include="reporting.cs">
+    <Compile Include="PL\reporting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reporting.Designer.cs">
+    <Compile Include="PL\reporting.Designer.cs">
       <DependentUpon>reporting.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Form1.cs">
@@ -209,23 +190,22 @@
     <Compile Include="Resources\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="row.cs" />
-    <Compile Include="so7t.cs">
+    <Compile Include="PL\so7t.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="so7t.Designer.cs">
+    <Compile Include="PL\so7t.Designer.cs">
       <DependentUpon>so7t.cs</DependentUpon>
     </Compile>
-    <Compile Include="store.cs">
+    <Compile Include="PL\store.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="store.Designer.cs">
+    <Compile Include="PL\store.Designer.cs">
       <DependentUpon>store.cs</DependentUpon>
     </Compile>
-    <Compile Include="storereport.cs">
+    <Compile Include="PL\storereport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="storereport.Designer.cs">
+    <Compile Include="PL\storereport.Designer.cs">
       <DependentUpon>storereport.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\suppliers.cs">
@@ -240,29 +220,28 @@
     <Compile Include="PL\test-repo.Designer.cs">
       <DependentUpon>test-repo.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestBills.cs">
+    <Compile Include="PL\TestBills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestBills.Designer.cs">
+    <Compile Include="PL\TestBills.Designer.cs">
       <DependentUpon>TestBills.cs</DependentUpon>
     </Compile>
-    <Compile Include="testcrystal.cs">
+    <Compile Include="Reports\testcrystal.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>testcrystal.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="testitemsrep.cs">
+    <Compile Include="PL\testitemsrep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testitemsrep.Designer.cs">
+    <Compile Include="PL\testitemsrep.Designer.cs">
       <DependentUpon>testitemsrep.cs</DependentUpon>
     </Compile>
-    <Compile Include="Then.cs" />
-    <Compile Include="view.cs">
+    <Compile Include="PL\view.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view.Designer.cs">
+    <Compile Include="PL\view.Designer.cs">
       <DependentUpon>view.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\الموظفين.cs">
@@ -282,19 +261,22 @@
     <EmbeddedResource Include="PL\brands.resx">
       <DependentUpon>brands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crv.rpt">
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crv.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport2.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
     </EmbeddedResource>
@@ -307,11 +289,8 @@
     <EmbeddedResource Include="PL\datagride.resx">
       <DependentUpon>datagride.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="date.resx">
+    <EmbeddedResource Include="PL\date.resx">
       <DependentUpon>date.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Form1.resx">
-      <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
@@ -322,7 +301,7 @@
     <EmbeddedResource Include="PL\Items_show.resx">
       <DependentUpon>Items_show.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="order.rpt">
+    <EmbeddedResource Include="Reports\order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>order.cs</LastGenOutput>
     </EmbeddedResource>
@@ -332,19 +311,19 @@
     <EmbeddedResource Include="PL\orders_out.resx">
       <DependentUpon>orders_out.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reporting.resx">
+    <EmbeddedResource Include="PL\reporting.resx">
       <DependentUpon>reporting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="so7t.resx">
+    <EmbeddedResource Include="PL\so7t.resx">
       <DependentUpon>so7t.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="store.resx">
+    <EmbeddedResource Include="PL\store.resx">
       <DependentUpon>store.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="storereport.resx">
+    <EmbeddedResource Include="PL\storereport.resx">
       <DependentUpon>storereport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\suppliers.resx">
@@ -353,17 +332,17 @@
     <EmbeddedResource Include="PL\test-repo.resx">
       <DependentUpon>test-repo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestBills.resx">
+    <EmbeddedResource Include="PL\TestBills.resx">
       <DependentUpon>TestBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testcrystal.rpt">
+    <EmbeddedResource Include="Reports\testcrystal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>testcrystal.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="testitemsrep.resx">
+    <EmbeddedResource Include="PL\testitemsrep.resx">
       <DependentUpon>testitemsrep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view.resx">
+    <EmbeddedResource Include="PL\view.resx">
       <DependentUpon>view.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\الموظفين.resx">
@@ -372,39 +351,7 @@
     <EmbeddedResource Include="PL\عملاء وموردين.resx">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="itemsDataSet1.xsc">
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="itemsDataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>itemsDataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="itemsDataSet1.xss">
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="johnDataSet.xsc">
       <DependentUpon>johnDataSet.xsd</DependentUpon>
     </None>

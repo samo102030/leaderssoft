@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JBS2 {
+namespace JBS2.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace JBS2 {
         
         public override string FullResourceName {
             get {
-                return "JBS2.order.rpt";
+                return "JBS2.Reports.order.rpt";
             }
             set {
                 // Do nothing

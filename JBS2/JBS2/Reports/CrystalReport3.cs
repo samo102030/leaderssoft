@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JBS2 {
+namespace JBS2.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace JBS2 {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class CrystalReport3 : ReportClass {
         
-        public CrystalReport1() {
+        public CrystalReport3() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace JBS2 {
         
         public override string FullResourceName {
             get {
-                return "JBS2.CrystalReport1.rpt";
+                return "JBS2.Reports.CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace JBS2 {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedCrystalReport3 : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedCrystalReport3() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace JBS2 {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            CrystalReport3 rpt = new CrystalReport3();
             rpt.Site = this.Site;
             return rpt;
         }

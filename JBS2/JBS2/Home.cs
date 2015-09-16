@@ -9,11 +9,23 @@ using System.Windows.Forms;
 
 namespace JBS2
 {
-    public partial class home : Form
+    public partial class Home_Page : Form
     {
-        public home()
+        public Home_Page()
         {
             InitializeComponent();
+            this.الاصنافToolStripMenuItem.Enabled = false;
+            this.الطلبياتToolStripMenuItem.Enabled = false;
+            this.عملاءوموردينToolStripMenuItem.Enabled = false;
+            this.المصانعToolStripMenuItem.Enabled = false;
+            this.المخازنToolStripMenuItem.Enabled = false;
+            this.تقاريربيعToolStripMenuItem.Enabled = false;
+            this.الخزينةToolStripMenuItem.Enabled = false;
+            this.الموظفينToolStripMenuItem.Enabled = false;
+            this.مساعدةToolStripMenuItem.Enabled = false;
+            this.إنشاءنسخةإحتياطيةToolStripMenuItem.Enabled = false;
+            this.إسترجاعنسخةنحفوظةToolStripMenuItem.Enabled = false;
+            
         }
 
         private void brandBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -47,197 +59,7 @@ namespace JBS2
 
         }
 
-        private void emp_IDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_IDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_nameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_nameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_Personal_IDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_Personal_IDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void birthdateLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void birthdateDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_AddLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_AddTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hire_dateLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hire_dateDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sallaryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sallaryTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bounusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bounusTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void phoneLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void phoneTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mobileLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mobileTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void e_mailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void e_mailTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void penalties_DaysLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void penalties_DaysTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void avaliable_Absence_DaysLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void avaliable_Absence_DaysTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_CVLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emp_CVTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void notesLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void notesTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void user_NameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void user_NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void الموظفينToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            employee em = new employee();
-            em.Show();
-            em.Closing += (sende, args) =>
-
-               this.Show();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         private void الواردةToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -359,12 +181,7 @@ void  tbs_FormClosed(object sender, FormClosedEventArgs e)
              this.Show();
         }
 
-         
-
-        private void testToolStripMenuItem1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
+   
 
         private void عرضالفواتيرToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -374,6 +191,13 @@ void  tbs_FormClosed(object sender, FormClosedEventArgs e)
             
         }
 
+        private void تسجيلالدخولToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            login nwlogin = new login();
+            nwlogin.ShowDialog();
+        }
+
+        
       
     }
 }

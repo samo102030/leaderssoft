@@ -90,7 +90,7 @@ namespace JBS2
 
         private void home_back_Click(object sender, EventArgs e)
         {
-            home h2 = new home();
+            Home_Page h2 = new Home_Page();
             h2.Show();
         }
 

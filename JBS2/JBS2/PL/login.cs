@@ -29,6 +29,9 @@ namespace JBS2
             if (Dt.Rows.Count > 0)
             {
                 MessageBox.Show("لقد تم تسجيل الدخول بنجاح");
+                //Home_Page nwhome = new Home_Page();
+                //nwhome.ShowDialog();
+                //this.Hide();
             }
             else
             {
