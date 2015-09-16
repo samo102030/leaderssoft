@@ -72,10 +72,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="As.cs" />
-    <Compile Include="brands.cs">
+    <Compile Include="Forms\brands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="brands.Designer.cs">
+    <Compile Include="Forms\brands.Designer.cs">
       <DependentUpon>brands.cs</DependentUpon>
     </Compile>
     <Compile Include="crv.cs">
@@ -108,16 +108,16 @@
     <Compile Include="CUP.Designer.cs">
       <DependentUpon>CUP.cs</DependentUpon>
     </Compile>
-    <Compile Include="customers.cs">
+    <Compile Include="Forms\customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="customers.Designer.cs">
+    <Compile Include="Forms\customers.Designer.cs">
       <DependentUpon>customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="datagride.cs">
+    <Compile Include="Forms\datagride.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="datagride.Designer.cs">
+    <Compile Include="Forms\datagride.Designer.cs">
       <DependentUpon>datagride.cs</DependentUpon>
     </Compile>
     <Compile Include="DataGridView1.cs" />
@@ -277,7 +277,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="brands.resx">
+    <EmbeddedResource Include="Forms\brands.resx">
       <DependentUpon>brands.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crv.rpt">
@@ -299,10 +299,10 @@
     <EmbeddedResource Include="CUP.resx">
       <DependentUpon>CUP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="customers.resx">
+    <EmbeddedResource Include="Forms\customers.resx">
       <DependentUpon>customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="datagride.resx">
+    <EmbeddedResource Include="Forms\datagride.resx">
       <DependentUpon>datagride.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="date.resx">
@@ -457,6 +457,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Artistic-Art-Flowers-Tree-Wall-Stickers-Murals-for-Living-Room-Wall-Decorating-Designs-Ideas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
