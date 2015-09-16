@@ -61,8 +61,8 @@ namespace JBS2
 
         private void add_cust_Click(object sender, EventArgs e)
         {
-            johnDataSetTableAdapters.customersTableAdapter addcst = new johnDataSetTableAdapters.customersTableAdapter();
-            addcst.customers_InsertQuery(customer_nameTextBox.Text, int.Parse(cUST_Personal_IDTextBox.Text), addressTextBox.Text, phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, company_nameTextBox.Text, double.Parse(accountTextBox.Text));
+            //johnDataSetTableAdapters.customersTableAdapter addcst = new johnDataSetTableAdapters.customersTableAdapter();
+            //addcst.customers_InsertQuery(customer_nameTextBox.Text, int.Parse(cUST_Personal_IDTextBox.Text), addressTextBox.Text, phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, company_nameTextBox.Text, double.Parse(accountTextBox.Text));
         }
 
         private void edite_cust_Click(object sender, EventArgs e)

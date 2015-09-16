@@ -47,8 +47,8 @@ namespace JBS2
         {
             //johnDataSetTableAdapters.ItemsTableAdapter additem = new johnDataSetTableAdapters.ItemsTableAdapter();
             //additem.test_item_InsertQuery(item_NameTextBox.Text, int.Parse(item_MinTextBox.Text), double.Parse(item_coast_saleTextBox.Text), int.Parse(item_amountTextBox.Text), double.Parse(item_private_saleTextBox.Text), double.Parse(item_genral_saleTextBox.Text));
-            johnDataSetTableAdapters.ItemsTableAdapter addite = new johnDataSetTableAdapters.ItemsTableAdapter();
-            addite.items_add_InsertQuery(item_NameTextBox1.Text, int.Parse(item_MinTextBox.Text), double.Parse(item_coast_saleTextBox.Text), comboBox1.Text, int.Parse(item_amountTextBox.Text), comboBox2.Text, double.Parse(item_private_saleTextBox.Text), double.Parse(c.Text));
+            //johnDataSetTableAdapters.ItemsTableAdapter addite = new johnDataSetTableAdapters.ItemsTableAdapter();
+            //addite.items_add_InsertQuery(item_NameTextBox1.Text, int.Parse(item_MinTextBox.Text), double.Parse(item_coast_saleTextBox.Text), comboBox1.Text, int.Parse(item_amountTextBox.Text), comboBox2.Text, double.Parse(item_private_saleTextBox.Text), double.Parse(c.Text));
 
 
 //            SqlConnection conec = new SqlConnection(@"Data Source=localhost;Initial Catalog=john;Integrated Security=True");

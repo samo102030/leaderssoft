@@ -44,8 +44,8 @@ namespace JBS2
 
         private void add_brand_Click(object sender, EventArgs e)
         {
-            johnDataSetTableAdapters.BrandTableAdapter addbr = new johnDataSetTableAdapters.BrandTableAdapter();
-            addbr.Brand_InsertQuery(brand_nameTextBox.Text);
+            //johnDataSetTableAdapters.BrandTableAdapter addbr = new johnDataSetTableAdapters.BrandTableAdapter();
+            //addbr.Brand_InsertQuery(brand_nameTextBox.Text);
         }
     }
 }

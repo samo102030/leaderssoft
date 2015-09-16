@@ -27,8 +27,8 @@ namespace JBS2
 
         private void add_stores_Click(object sender, EventArgs e)
         {
-            johnDataSetTableAdapters.StoreTableAdapter addst = new johnDataSetTableAdapters.StoreTableAdapter();
-            addst.store_InsertQuery(int.Parse(store_IDTextBox.Text), store_NameTextBox.Text);
+            //johnDataSetTableAdapters.StoreTableAdapter addst = new johnDataSetTableAdapters.StoreTableAdapter();
+            //addst.store_InsertQuery(int.Parse(store_IDTextBox.Text), store_NameTextBox.Text);
             //string store_num = store_IDTextBox .Text;
             //string store_name = store_NameTextBox.Text;
             //string[] row = { store_num, store_name };
@@ -63,7 +63,7 @@ namespace JBS2
         {
             try
             {
-                this.storeTableAdapter.fill_store(this.johnDataSet.Store);
+             //   this.storeTableAdapter.fill_store(this.johnDataSet.Store);
             }
             catch (System.Exception ex)
             {

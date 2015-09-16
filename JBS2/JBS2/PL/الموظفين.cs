@@ -18,8 +18,8 @@ namespace JBS2
 
         private void add_Click(object sender, EventArgs e)
         {
-            johnDataSetTableAdapters.EmployeeTableAdapter addemp = new johnDataSetTableAdapters.EmployeeTableAdapter();
-            addemp.Employee_InsertQuery(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value, emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text), double.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text), int.Parse(avaliable_Absence_DaysTextBox.Text), emp_CVTextBox.Text, notesTextBox.Text, user_NameTextBox.Text);
+            //johnDataSetTableAdapters.EmployeeTableAdapter addemp = new johnDataSetTableAdapters.EmployeeTableAdapter();
+            //addemp.Employee_InsertQuery(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value, emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text), double.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text), int.Parse(avaliable_Absence_DaysTextBox.Text), emp_CVTextBox.Text, notesTextBox.Text, user_NameTextBox.Text);
         }
 
         private void employee_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace JBS2
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CUP cp = new CUP();
+            login cp = new login();
             cp.Show();
         }
     }

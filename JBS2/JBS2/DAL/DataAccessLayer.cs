@@ -40,6 +40,8 @@ namespace JBS2.DAL
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = Stored_procedure;
+            sqlcmd.Connection = sqlcon;
+
             if (param != null)
             {
                 for (int i = 0; i < param.Length; i++)
@@ -58,6 +60,7 @@ namespace JBS2.DAL
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = Stored_procedure;
+            sqlcmd.Connection = sqlcon;
 
             if (param != null)
             {
