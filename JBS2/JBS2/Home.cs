@@ -11,20 +11,46 @@ namespace JBS2
 {
     public partial class Home_Page : Form
     {
+        private static Home_Page hmp;
+        // فى هذه الدلة نتحقق اذا كانت الصفحة مفتوحة ام لا فاذا كانت مفتوحة فتغلق حتى تفتح من جديد
+        static void hmp_FormClosed(object Sender, FormClosedEventArgs e)
+        {
+            hmp = null;
+        }
+        // هذا حتى يمكننا من التعامل مع الصفحة الرئيسية بسهولة فى اى صفحة اخرى تف البرنامج
+        public static Home_Page get_home_page
+        {
+            get
+            {
+                if (hmp == null)
+                {
+                    hmp = new Home_Page();
+                    hmp.FormClosed+=new FormClosedEventHandler(hmp_FormClosed);
+                }
+                return hmp;
+            }
+        }
+
         public Home_Page()
         {
             InitializeComponent();
-            this.الاصنافToolStripMenuItem.Enabled = false;
-            this.الطلبياتToolStripMenuItem.Enabled = false;
-            this.عملاءوموردينToolStripMenuItem.Enabled = false;
-            this.المصانعToolStripMenuItem.Enabled = false;
-            this.المخازنToolStripMenuItem.Enabled = false;
-            this.تقاريربيعToolStripMenuItem.Enabled = false;
-            this.الخزينةToolStripMenuItem.Enabled = false;
-            this.الموظفينToolStripMenuItem.Enabled = false;
-            this.مساعدةToolStripMenuItem.Enabled = false;
-            this.إنشاءنسخةإحتياطيةToolStripMenuItem.Enabled = false;
-            this.إسترجاعنسخةنحفوظةToolStripMenuItem.Enabled = false;
+            //this hmp represent the homepage and we will deal with it as the homepage form
+
+            if (hmp == null)
+                hmp = this;
+
+            this.الاصنافToolStripMenuItem.Available = false;
+            this.الطلبياتToolStripMenuItem.Available = false;
+            this.عملاءوموردينToolStripMenuItem.Available = false;
+            this.المصانعToolStripMenuItem.Available = false;
+            this.المخازنToolStripMenuItem.Available = false;
+            this.تقاريربيعToolStripMenuItem.Available = false;
+            this.الخزينةToolStripMenuItem.Available = false;
+            this.الموظفينToolStripMenuItem.Available = false;
+            this.مساعدةToolStripMenuItem.Available = false;
+            this.إنشاءنسخةإحتياطيةToolStripMenuItem.Available = false;
+            this.إسترجاعنسخةنحفوظةToolStripMenuItem.Available = false;
+            this.testToolStripMenuItem.Available = false;
             
         }
 
@@ -136,28 +162,9 @@ namespace JBS2
 
         }
 
-        TestBills tbs;
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (tbs == null)
-            {
-                tbs = new TestBills();
-                tbs.MdiParent = this;
-                tbs.FormClosed += new FormClosedEventHandler(tbs_FormClosed);
 
-                tbs.Show();
-            }
-            else
-                tbs.Activate();
-        }
+      
 
-        private
-
-void  tbs_FormClosed(object sender, FormClosedEventArgs e)
-{
-    tbs = null;
- //	throw new NotImplementedException();
-}
         void عرضالاصنافToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Items_show itsh = new Items_show();
@@ -191,13 +198,43 @@ void  tbs_FormClosed(object sender, FormClosedEventArgs e)
             
         }
 
+        login nwlogin;
         private void تسجيلالدخولToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            login nwlogin = new login();
-            nwlogin.ShowDialog();
+            if (nwlogin == null)
+            {
+                nwlogin = new login();
+                nwlogin.MdiParent = this;
+                nwlogin.FormClosed += new FormClosedEventHandler(nwlogin_FormClosed);
+                nwlogin.Show();
+            }
         }
 
-        
+        void nwlogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            nwlogin = null;
+        }
+        TestBills tbs;
+        private void tESTToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (tbs == null)
+            {
+                tbs = new TestBills();
+                tbs.MdiParent = this;
+                tbs.FormClosed += new FormClosedEventHandler(tbs_FormClosed);
+
+                tbs.Show();
+            }
+            else
+                tbs.Activate();
+        }
+
+        private void tbs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            tbs = null;
+            //	throw new NotImplementedException();
+        }
       
     }
 }

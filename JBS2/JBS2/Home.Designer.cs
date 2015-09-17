@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ملفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.إنشاءنسخةإحتياطيةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.إسترجاعنسخةنحفوظةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -74,6 +74,7 @@
             this.تقاريرالمبيعاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تتقاريرالاصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تقاريرالمخازنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.johnDataSet = new JBS2.johnDataSet();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new JBS2.johnDataSetTableAdapters.EmployeeTableAdapter();
@@ -88,7 +89,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
+            this.ملفToolStripMenuItem,
             this.الاصنافToolStripMenuItem,
             this.الطلبياتToolStripMenuItem,
             this.عملاءوموردينToolStripMenuItem,
@@ -97,7 +98,8 @@
             this.تقاريربيعToolStripMenuItem,
             this.الخزينةToolStripMenuItem,
             this.الموظفينToolStripMenuItem,
-            this.مساعدةToolStripMenuItem});
+            this.مساعدةToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -105,18 +107,17 @@
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // testToolStripMenuItem
+            // ملفToolStripMenuItem
             // 
-            this.testToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ملفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.إنشاءنسخةإحتياطيةToolStripMenuItem,
             this.إسترجاعنسخةنحفوظةToolStripMenuItem,
             this.toolStripSeparator3,
             this.تسجيلالدخولToolStripMenuItem,
             this.تسجيلالخروجToolStripMenuItem});
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
-            this.testToolStripMenuItem.Text = "ملف";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            this.ملفToolStripMenuItem.Name = "ملفToolStripMenuItem";
+            this.ملفToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
+            this.ملفToolStripMenuItem.Text = "ملف";
             // 
             // إنشاءنسخةإحتياطيةToolStripMenuItem
             // 
@@ -429,6 +430,13 @@
             this.تقاريرالمخازنToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.تقاريرالمخازنToolStripMenuItem.Text = "تقارير المخازن";
             // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.testToolStripMenuItem.Text = "TEST";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem2_Click);
+            // 
             // johnDataSet
             // 
             this.johnDataSet.DataSetName = "johnDataSet";
@@ -497,51 +505,52 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private johnDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private johnDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem الاصنافToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الطلبياتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem عملاءوموردينToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem المخازنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريربيعToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الخزينةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الموظفينToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem مساعدةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الواردةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الصادرةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem عرضالاصنافToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضافةصنفجديدToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضافةعميلToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضافةمخزنجديدToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقريرعنالمخازنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem قائمةبأسعارالاصتافToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضاقةموردجديدToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem عرضوتعديلبياناتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الموردينToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem العملاءToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضافةموظفجديدToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem عرضوتعديلبياناتالموظفينToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem عميلنقدىToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem عميلاجلToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem عرضالمخازنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالمبيعاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تتقاريرالاصنافToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تقاريرالمخازنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem المصانعToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اضافةمصنعToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem عرضالفواتيرToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تسجيلالدخولToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إنشاءنسخةإحتياطيةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إسترجاعنسخةنحفوظةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تسجيلالخروجToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إدارةالمصانعToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem عرضالخزنةالحاليةToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem تسجيلعمليةبيعToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem الاصنافToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem الطلبياتToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عملاءوموردينToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem المخازنToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تقاريربيعToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem الخزينةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem الموظفينToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem مساعدةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem الواردةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem الصادرةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عرضالاصنافToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضافةصنفجديدToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضافةعميلToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضافةمخزنجديدToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تقريرعنالمخازنToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem قائمةبأسعارالاصتافToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem ملفToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضاقةموردجديدToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عرضوتعديلبياناتToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضافةموظفجديدToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عرضوتعديلبياناتالموظفينToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عرضالمخازنToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تقاريرالمبيعاتToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تتقاريرالاصنافToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تقاريرالمخازنToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem المصانعToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem اضافةمصنعToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem عرضالفواتيرToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تسجيلالدخولToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem إنشاءنسخةإحتياطيةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem إسترجاعنسخةنحفوظةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تسجيلالخروجToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem إدارةالمصانعToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem عرضالخزنةالحاليةToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem تسجيلعمليةبيعToolStripMenuItem;
 
 
 

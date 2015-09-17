@@ -28,14 +28,14 @@ namespace JBS2
             DataTable Dt = log.LOGIN(tex_User_Name.Text, tex_userpwd.Text);
             if (Dt.Rows.Count > 0)
             {
-                MessageBox.Show("لقد تم تسجيل الدخول بنجاح");
-                //Home_Page nwhome = new Home_Page();
-                //nwhome.ShowDialog();
-                //this.Hide();
+                MessageBox.Show("مرحبا " + tex_User_Name.Text +"\n"+"لقد تم تسجيلك بنجاح "); //it was for test the button and now we didn't need it any more
+                this.Close();
+                Home_Page.get_home_page.الاصنافToolStripMenuItem.Available = true;
+               
             }
             else
             {
-                MessageBox.Show("فشل فى تسجيل الدخول ");
+                MessageBox.Show("فشل فى تسجيل الدخول برجاء المحاولة مرة اخرى مع التاكد من اسم المستخدم وكلمة المرور ");
             }
         }
 
