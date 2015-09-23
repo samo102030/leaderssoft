@@ -6,11 +6,8 @@
 }
 
 namespace JBS2.johnDataSetTableAdapters {
-    partial class StoreTableAdapter
-    {
-    }
     
     
-    public partial class supplierTableAdapter {
+    public partial class Account_ManagmentTableAdapter {
     }
 }

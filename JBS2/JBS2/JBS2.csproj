@@ -71,129 +71,117 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="As.cs" />
-    <Compile Include="brands.cs">
+    <Compile Include="BL\CLS_LOGIN.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\brands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="brands.Designer.cs">
+    <Compile Include="PL\brands.Designer.cs">
       <DependentUpon>brands.cs</DependentUpon>
     </Compile>
-    <Compile Include="crv.cs">
+    <Compile Include="Reports\crv.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crv.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="Reports\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport2.cs">
+    <Compile Include="Reports\CrystalReport2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport3.cs">
+    <Compile Include="Reports\CrystalReport3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CUP.cs">
+    <Compile Include="PL\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CUP.Designer.cs">
-      <DependentUpon>CUP.cs</DependentUpon>
+    <Compile Include="PL\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="customers.cs">
+    <Compile Include="PL\customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="customers.Designer.cs">
+    <Compile Include="PL\customers.Designer.cs">
       <DependentUpon>customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="datagride.cs">
+    <Compile Include="PL\datagride.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="datagride.Designer.cs">
+    <Compile Include="PL\datagride.Designer.cs">
       <DependentUpon>datagride.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridView1.cs" />
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="date.cs">
+    <Compile Include="PL\date.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="date.Designer.cs">
+    <Compile Include="PL\date.Designer.cs">
       <DependentUpon>date.cs</DependentUpon>
     </Compile>
-    <Compile Include="End.cs" />
-    <Compile Include="For.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items.cs">
+    <Compile Include="PL\Items.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items.Designer.cs">
+    <Compile Include="PL\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Items_Details.cs">
+    <Compile Include="PL\Items_Details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items_Details.Designer.cs">
+    <Compile Include="PL\Items_Details.Designer.cs">
       <DependentUpon>Items_Details.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items_show.cs">
+    <Compile Include="PL\Items_show.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items_show.Designer.cs">
+    <Compile Include="PL\Items_show.Designer.cs">
       <DependentUpon>Items_show.cs</DependentUpon>
     </Compile>
     <Compile Include="johnDataSet.cs">
       <DependentUpon>johnDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Next.cs" />
-    <Compile Include="order.cs">
+    <Compile Include="johnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>johnDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\order.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>order.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="orders_in.cs">
+    <Compile Include="PL\orders_in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders_in.Designer.cs">
+    <Compile Include="PL\orders_in.Designer.cs">
       <DependentUpon>orders_in.cs</DependentUpon>
     </Compile>
-    <Compile Include="orders_out.cs">
+    <Compile Include="PL\orders_out.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders_out.Designer.cs">
+    <Compile Include="PL\orders_out.Designer.cs">
       <DependentUpon>orders_out.cs</DependentUpon>
     </Compile>
-    <Compile Include="reporting.cs">
+    <Compile Include="PL\reporting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reporting.Designer.cs">
+    <Compile Include="PL\reporting.Designer.cs">
       <DependentUpon>reporting.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Form1.cs">
@@ -202,207 +190,168 @@
     <Compile Include="Resources\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="row.cs" />
-    <Compile Include="so7t.cs">
+    <Compile Include="PL\so7t.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="so7t.Designer.cs">
+    <Compile Include="PL\so7t.Designer.cs">
       <DependentUpon>so7t.cs</DependentUpon>
     </Compile>
-    <Compile Include="store.cs">
+    <Compile Include="PL\store.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="store.Designer.cs">
+    <Compile Include="PL\store.Designer.cs">
       <DependentUpon>store.cs</DependentUpon>
     </Compile>
-    <Compile Include="storereport.cs">
+    <Compile Include="PL\storereport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="storereport.Designer.cs">
+    <Compile Include="PL\storereport.Designer.cs">
       <DependentUpon>storereport.cs</DependentUpon>
     </Compile>
-    <Compile Include="suppliers.cs">
+    <Compile Include="PL\suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="suppliers.Designer.cs">
+    <Compile Include="PL\suppliers.Designer.cs">
       <DependentUpon>suppliers.cs</DependentUpon>
     </Compile>
-    <Compile Include="test-repo.cs">
+    <Compile Include="PL\test-repo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test-repo.Designer.cs">
+    <Compile Include="PL\test-repo.Designer.cs">
       <DependentUpon>test-repo.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestBills.cs">
+    <Compile Include="PL\TestBills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestBills.Designer.cs">
+    <Compile Include="PL\TestBills.Designer.cs">
       <DependentUpon>TestBills.cs</DependentUpon>
     </Compile>
-    <Compile Include="testcrystal.cs">
+    <Compile Include="Reports\testcrystal.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>testcrystal.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="testitemsrep.cs">
+    <Compile Include="PL\testitemsrep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testitemsrep.Designer.cs">
+    <Compile Include="PL\testitemsrep.Designer.cs">
       <DependentUpon>testitemsrep.cs</DependentUpon>
     </Compile>
-    <Compile Include="Then.cs" />
-    <Compile Include="view.cs">
+    <Compile Include="PL\view.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view.Designer.cs">
+    <Compile Include="PL\view.Designer.cs">
       <DependentUpon>view.cs</DependentUpon>
     </Compile>
-    <Compile Include="الموظفين.cs">
+    <Compile Include="PL\الموظفين.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الموظفين.Designer.cs">
+    <Compile Include="PL\الموظفين.Designer.cs">
       <DependentUpon>الموظفين.cs</DependentUpon>
     </Compile>
-    <Compile Include="عملاء وموردين.cs">
+    <Compile Include="PL\عملاء وموردين.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="عملاء وموردين.Designer.cs">
+    <Compile Include="PL\عملاء وموردين.Designer.cs">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
-    </Compile>
-    <Compile Include="johnDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>johnDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="brands.resx">
+    <EmbeddedResource Include="PL\brands.resx">
       <DependentUpon>brands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crv.rpt">
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crv.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport2.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
+    <EmbeddedResource Include="Reports\CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CUP.resx">
-      <DependentUpon>CUP.cs</DependentUpon>
+    <EmbeddedResource Include="PL\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="customers.resx">
+    <EmbeddedResource Include="PL\customers.resx">
       <DependentUpon>customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="datagride.resx">
+    <EmbeddedResource Include="PL\datagride.resx">
       <DependentUpon>datagride.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="date.resx">
+    <EmbeddedResource Include="PL\date.resx">
       <DependentUpon>date.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Items.resx">
+    <EmbeddedResource Include="PL\Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items_Details.resx">
+    <EmbeddedResource Include="PL\Items_Details.resx">
       <DependentUpon>Items_Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items_show.resx">
+    <EmbeddedResource Include="PL\Items_show.resx">
       <DependentUpon>Items_show.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="order.rpt">
+    <EmbeddedResource Include="Reports\order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>order.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders_in.resx">
+    <EmbeddedResource Include="PL\orders_in.resx">
       <DependentUpon>orders_in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders_out.resx">
+    <EmbeddedResource Include="PL\orders_out.resx">
       <DependentUpon>orders_out.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reporting.resx">
+    <EmbeddedResource Include="PL\reporting.resx">
       <DependentUpon>reporting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="so7t.resx">
+    <EmbeddedResource Include="PL\so7t.resx">
       <DependentUpon>so7t.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="store.resx">
+    <EmbeddedResource Include="PL\store.resx">
       <DependentUpon>store.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="storereport.resx">
+    <EmbeddedResource Include="PL\storereport.resx">
       <DependentUpon>storereport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="suppliers.resx">
+    <EmbeddedResource Include="PL\suppliers.resx">
       <DependentUpon>suppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test-repo.resx">
+    <EmbeddedResource Include="PL\test-repo.resx">
       <DependentUpon>test-repo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestBills.resx">
+    <EmbeddedResource Include="PL\TestBills.resx">
       <DependentUpon>TestBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testcrystal.rpt">
+    <EmbeddedResource Include="Reports\testcrystal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>testcrystal.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="testitemsrep.resx">
+    <EmbeddedResource Include="PL\testitemsrep.resx">
       <DependentUpon>testitemsrep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view.resx">
+    <EmbeddedResource Include="PL\view.resx">
       <DependentUpon>view.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الموظفين.resx">
+    <EmbeddedResource Include="PL\الموظفين.resx">
       <DependentUpon>الموظفين.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="عملاء وموردين.resx">
+    <EmbeddedResource Include="PL\عملاء وموردين.resx">
       <DependentUpon>عملاء وموردين.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="itemsDataSet1.xsc">
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="itemsDataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>itemsDataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="itemsDataSet1.xss">
-      <DependentUpon>itemsDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="johnDataSet.xsc">
       <DependentUpon>johnDataSet.xsd</DependentUpon>
     </None>
@@ -458,6 +407,7 @@
   <ItemGroup>
     <None Include="Resources\Artistic-Art-Flowers-Tree-Wall-Stickers-Murals-for-Living-Room-Wall-Decorating-Designs-Ideas.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
