@@ -206,8 +206,13 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
                     //float Total_current_cost_after_Adding = Total_current_cost + ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text)));
                     //string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
 
+//<<<<<<< HEAD:JBS2/JBS2/orders_out.cs
+                    string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost };
+                    dataGridView1.Rows.Add(row);
+//=======
                     //string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, price_after_disc };
                     //dataGridView1.Rows.Add(row);
+//>>>>>>> d310fd31666a2256546d1ff2e4885328ef1b55a8:JBS2/JBS2/PL/orders_out.cs
 
                     //here we will the sum of all items in this bill
                     double sum = 0;
