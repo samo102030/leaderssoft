@@ -208,8 +208,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
                     //string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
 
 //<<<<<<< HEAD:JBS2/JBS2/orders_out.cs
-                    string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost };
-                    dataGridView1.Rows.Add(row);
+                    //string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost };
+                    //dataGridView1.Rows.Add(row);
 //=======
                     //string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, price_after_disc };
                     //dataGridView1.Rows.Add(row);
