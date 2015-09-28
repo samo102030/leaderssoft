@@ -51,6 +51,7 @@ namespace JBS2
             this.إنشاءنسخةإحتياطيةToolStripMenuItem.Available = false;
             this.إسترجاعنسخةنحفوظةToolStripMenuItem.Available = false;
             this.testToolStripMenuItem.Available = false;
+            this.تسجيلالخروجToolStripMenuItem.Available = false;
             
         }
 
