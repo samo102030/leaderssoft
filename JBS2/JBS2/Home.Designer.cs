@@ -196,7 +196,7 @@
             // الواردةToolStripMenuItem
             // 
             this.الواردةToolStripMenuItem.Name = "الواردةToolStripMenuItem";
-            this.الواردةToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.الواردةToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.الواردةToolStripMenuItem.Text = "فواتير الشراء";
             this.الواردةToolStripMenuItem.Click += new System.EventHandler(this.الواردةToolStripMenuItem_Click);
             // 
@@ -206,8 +206,7 @@
             this.عميلنقدىToolStripMenuItem,
             this.عميلاجلToolStripMenuItem});
             this.الصادرةToolStripMenuItem.Name = "الصادرةToolStripMenuItem";
-            this.الصادرةToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.الصادرةToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.الصادرةToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.الصادرةToolStripMenuItem.Text = "فواتير البيع";
             this.الصادرةToolStripMenuItem.Click += new System.EventHandler(this.الصادرةToolStripMenuItem_Click);
             // 
@@ -227,7 +226,7 @@
             // عرضالفواتيرToolStripMenuItem
             // 
             this.عرضالفواتيرToolStripMenuItem.Name = "عرضالفواتيرToolStripMenuItem";
-            this.عرضالفواتيرToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.عرضالفواتيرToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.عرضالفواتيرToolStripMenuItem.Text = "عرض الفواتير";
             this.عرضالفواتيرToolStripMenuItem.Click += new System.EventHandler(this.عرضالفواتيرToolStripMenuItem_Click);
             // 

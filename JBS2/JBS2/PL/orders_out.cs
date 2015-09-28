@@ -197,7 +197,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
                     string Item_sale_Price = item_genral_saleTextBox.Text;
                     string amount = amountsale.Text;
                 
-                    float Total_current_cost = (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
+                    float Total_current_cost;
+                Total_current_cost= (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
                     //float Total_current_cost_discount = ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text))) * float.Parse(bill_out_DiscountTextBox.Text) / 100;
                     //Total_current_cost -= Total_current_cost_discount;
                     string Total_current_cost1 = Total_current_cost.ToString();
