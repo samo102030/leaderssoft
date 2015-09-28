@@ -92,7 +92,7 @@
             // 
             passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(508, 166);
+            passwordLabel.Location = new System.Drawing.Point(359, 194);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(62, 13);
             passwordLabel.TabIndex = 33;
@@ -102,7 +102,7 @@
             // 
             user_NameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             user_NameLabel.AutoSize = true;
-            user_NameLabel.Location = new System.Drawing.Point(508, 140);
+            user_NameLabel.Location = new System.Drawing.Point(359, 168);
             user_NameLabel.Name = "user_NameLabel";
             user_NameLabel.Size = new System.Drawing.Size(68, 13);
             user_NameLabel.TabIndex = 31;
@@ -112,7 +112,7 @@
             // 
             emp_nameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             emp_nameLabel.AutoSize = true;
-            emp_nameLabel.Location = new System.Drawing.Point(871, 10);
+            emp_nameLabel.Location = new System.Drawing.Point(28, 34);
             emp_nameLabel.Name = "emp_nameLabel";
             emp_nameLabel.Size = new System.Drawing.Size(60, 13);
             emp_nameLabel.TabIndex = 3;
@@ -122,7 +122,7 @@
             // 
             notesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             notesLabel.AutoSize = true;
-            notesLabel.Location = new System.Drawing.Point(508, 114);
+            notesLabel.Location = new System.Drawing.Point(359, 142);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new System.Drawing.Size(45, 13);
             notesLabel.TabIndex = 29;
@@ -132,7 +132,7 @@
             // 
             emp_Personal_IDLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             emp_Personal_IDLabel.AutoSize = true;
-            emp_Personal_IDLabel.Location = new System.Drawing.Point(871, 36);
+            emp_Personal_IDLabel.Location = new System.Drawing.Point(28, 60);
             emp_Personal_IDLabel.Name = "emp_Personal_IDLabel";
             emp_Personal_IDLabel.Size = new System.Drawing.Size(75, 13);
             emp_Personal_IDLabel.TabIndex = 5;
@@ -142,7 +142,7 @@
             // 
             emp_CVLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             emp_CVLabel.AutoSize = true;
-            emp_CVLabel.Location = new System.Drawing.Point(508, 88);
+            emp_CVLabel.Location = new System.Drawing.Point(359, 116);
             emp_CVLabel.Name = "emp_CVLabel";
             emp_CVLabel.Size = new System.Drawing.Size(24, 13);
             emp_CVLabel.TabIndex = 27;
@@ -152,7 +152,7 @@
             // 
             birthdateLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             birthdateLabel.AutoSize = true;
-            birthdateLabel.Location = new System.Drawing.Point(871, 63);
+            birthdateLabel.Location = new System.Drawing.Point(28, 87);
             birthdateLabel.Name = "birthdateLabel";
             birthdateLabel.Size = new System.Drawing.Size(62, 13);
             birthdateLabel.TabIndex = 7;
@@ -162,7 +162,7 @@
             // 
             avaliable_Absence_DaysLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             avaliable_Absence_DaysLabel.AutoSize = true;
-            avaliable_Absence_DaysLabel.Location = new System.Drawing.Point(508, 62);
+            avaliable_Absence_DaysLabel.Location = new System.Drawing.Point(359, 90);
             avaliable_Absence_DaysLabel.Name = "avaliable_Absence_DaysLabel";
             avaliable_Absence_DaysLabel.Size = new System.Drawing.Size(43, 13);
             avaliable_Absence_DaysLabel.TabIndex = 25;
@@ -172,7 +172,7 @@
             // 
             emp_AddLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             emp_AddLabel.AutoSize = true;
-            emp_AddLabel.Location = new System.Drawing.Point(871, 88);
+            emp_AddLabel.Location = new System.Drawing.Point(28, 112);
             emp_AddLabel.Name = "emp_AddLabel";
             emp_AddLabel.Size = new System.Drawing.Size(39, 13);
             emp_AddLabel.TabIndex = 9;
@@ -182,7 +182,7 @@
             // 
             penalties_DaysLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             penalties_DaysLabel.AutoSize = true;
-            penalties_DaysLabel.Location = new System.Drawing.Point(508, 36);
+            penalties_DaysLabel.Location = new System.Drawing.Point(359, 64);
             penalties_DaysLabel.Name = "penalties_DaysLabel";
             penalties_DaysLabel.Size = new System.Drawing.Size(56, 13);
             penalties_DaysLabel.TabIndex = 23;
@@ -192,7 +192,7 @@
             // 
             hire_dateLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             hire_dateLabel.AutoSize = true;
-            hire_dateLabel.Location = new System.Drawing.Point(871, 115);
+            hire_dateLabel.Location = new System.Drawing.Point(28, 139);
             hire_dateLabel.Name = "hire_dateLabel";
             hire_dateLabel.Size = new System.Drawing.Size(66, 13);
             hire_dateLabel.TabIndex = 11;
@@ -202,7 +202,7 @@
             // 
             e_mailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             e_mailLabel.AutoSize = true;
-            e_mailLabel.Location = new System.Drawing.Point(508, 10);
+            e_mailLabel.Location = new System.Drawing.Point(359, 38);
             e_mailLabel.Name = "e_mailLabel";
             e_mailLabel.Size = new System.Drawing.Size(82, 13);
             e_mailLabel.TabIndex = 21;
@@ -212,7 +212,7 @@
             // 
             sallaryLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             sallaryLabel.AutoSize = true;
-            sallaryLabel.Location = new System.Drawing.Point(871, 140);
+            sallaryLabel.Location = new System.Drawing.Point(28, 164);
             sallaryLabel.Name = "sallaryLabel";
             sallaryLabel.Size = new System.Drawing.Size(35, 13);
             sallaryLabel.TabIndex = 13;
@@ -222,7 +222,7 @@
             // 
             mobileLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             mobileLabel.AutoSize = true;
-            mobileLabel.Location = new System.Drawing.Point(874, 226);
+            mobileLabel.Location = new System.Drawing.Point(31, 250);
             mobileLabel.Name = "mobileLabel";
             mobileLabel.Size = new System.Drawing.Size(43, 13);
             mobileLabel.TabIndex = 19;
@@ -232,7 +232,7 @@
             // 
             phoneLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(874, 200);
+            phoneLabel.Location = new System.Drawing.Point(31, 224);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(36, 13);
             phoneLabel.TabIndex = 17;
@@ -242,7 +242,7 @@
             // 
             bounusLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             bounusLabel.AutoSize = true;
-            bounusLabel.Location = new System.Drawing.Point(871, 166);
+            bounusLabel.Location = new System.Drawing.Point(28, 190);
             bounusLabel.Name = "bounusLabel";
             bounusLabel.Size = new System.Drawing.Size(33, 13);
             bounusLabel.TabIndex = 15;
@@ -257,7 +257,7 @@
             this.panel1.Controls.Add(this.save);
             this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.delete);
-            this.panel1.Location = new System.Drawing.Point(12, 324);
+            this.panel1.Location = new System.Drawing.Point(13, 339);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 131);
             this.panel1.TabIndex = 43;
@@ -316,7 +316,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.phoneTextBox.Location = new System.Drawing.Point(630, 200);
+            this.phoneTextBox.Location = new System.Drawing.Point(113, 225);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(200, 20);
             this.phoneTextBox.TabIndex = 18;
@@ -324,7 +324,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordTextBox.Location = new System.Drawing.Point(286, 166);
+            this.passwordTextBox.Location = new System.Drawing.Point(453, 191);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(200, 20);
             this.passwordTextBox.TabIndex = 34;
@@ -332,7 +332,7 @@
             // user_NameTextBox
             // 
             this.user_NameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.user_NameTextBox.Location = new System.Drawing.Point(286, 140);
+            this.user_NameTextBox.Location = new System.Drawing.Point(453, 165);
             this.user_NameTextBox.Name = "user_NameTextBox";
             this.user_NameTextBox.Size = new System.Drawing.Size(200, 20);
             this.user_NameTextBox.TabIndex = 32;
@@ -340,7 +340,7 @@
             // notesTextBox
             // 
             this.notesTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.notesTextBox.Location = new System.Drawing.Point(286, 114);
+            this.notesTextBox.Location = new System.Drawing.Point(453, 139);
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(200, 20);
             this.notesTextBox.TabIndex = 30;
@@ -348,7 +348,7 @@
             // emp_nameTextBox
             // 
             this.emp_nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.emp_nameTextBox.Location = new System.Drawing.Point(630, 10);
+            this.emp_nameTextBox.Location = new System.Drawing.Point(113, 35);
             this.emp_nameTextBox.Name = "emp_nameTextBox";
             this.emp_nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.emp_nameTextBox.TabIndex = 4;
@@ -356,7 +356,7 @@
             // emp_CVTextBox
             // 
             this.emp_CVTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.emp_CVTextBox.Location = new System.Drawing.Point(286, 88);
+            this.emp_CVTextBox.Location = new System.Drawing.Point(453, 113);
             this.emp_CVTextBox.Name = "emp_CVTextBox";
             this.emp_CVTextBox.Size = new System.Drawing.Size(200, 20);
             this.emp_CVTextBox.TabIndex = 28;
@@ -364,7 +364,7 @@
             // emp_Personal_IDTextBox
             // 
             this.emp_Personal_IDTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.emp_Personal_IDTextBox.Location = new System.Drawing.Point(630, 36);
+            this.emp_Personal_IDTextBox.Location = new System.Drawing.Point(113, 61);
             this.emp_Personal_IDTextBox.Name = "emp_Personal_IDTextBox";
             this.emp_Personal_IDTextBox.Size = new System.Drawing.Size(200, 20);
             this.emp_Personal_IDTextBox.TabIndex = 6;
@@ -372,7 +372,7 @@
             // avaliable_Absence_DaysTextBox
             // 
             this.avaliable_Absence_DaysTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.avaliable_Absence_DaysTextBox.Location = new System.Drawing.Point(286, 62);
+            this.avaliable_Absence_DaysTextBox.Location = new System.Drawing.Point(453, 87);
             this.avaliable_Absence_DaysTextBox.Name = "avaliable_Absence_DaysTextBox";
             this.avaliable_Absence_DaysTextBox.Size = new System.Drawing.Size(200, 20);
             this.avaliable_Absence_DaysTextBox.TabIndex = 26;
@@ -380,7 +380,7 @@
             // birthdateDateTimePicker
             // 
             this.birthdateDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.birthdateDateTimePicker.Location = new System.Drawing.Point(630, 62);
+            this.birthdateDateTimePicker.Location = new System.Drawing.Point(113, 87);
             this.birthdateDateTimePicker.Name = "birthdateDateTimePicker";
             this.birthdateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.birthdateDateTimePicker.TabIndex = 8;
@@ -388,7 +388,7 @@
             // penalties_DaysTextBox
             // 
             this.penalties_DaysTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.penalties_DaysTextBox.Location = new System.Drawing.Point(286, 36);
+            this.penalties_DaysTextBox.Location = new System.Drawing.Point(453, 61);
             this.penalties_DaysTextBox.Name = "penalties_DaysTextBox";
             this.penalties_DaysTextBox.Size = new System.Drawing.Size(200, 20);
             this.penalties_DaysTextBox.TabIndex = 24;
@@ -396,7 +396,7 @@
             // emp_AddTextBox
             // 
             this.emp_AddTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.emp_AddTextBox.Location = new System.Drawing.Point(630, 88);
+            this.emp_AddTextBox.Location = new System.Drawing.Point(113, 113);
             this.emp_AddTextBox.Name = "emp_AddTextBox";
             this.emp_AddTextBox.Size = new System.Drawing.Size(200, 20);
             this.emp_AddTextBox.TabIndex = 10;
@@ -404,7 +404,7 @@
             // e_mailTextBox
             // 
             this.e_mailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.e_mailTextBox.Location = new System.Drawing.Point(286, 10);
+            this.e_mailTextBox.Location = new System.Drawing.Point(453, 35);
             this.e_mailTextBox.Name = "e_mailTextBox";
             this.e_mailTextBox.Size = new System.Drawing.Size(200, 20);
             this.e_mailTextBox.TabIndex = 22;
@@ -412,7 +412,7 @@
             // hire_dateDateTimePicker
             // 
             this.hire_dateDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hire_dateDateTimePicker.Location = new System.Drawing.Point(630, 114);
+            this.hire_dateDateTimePicker.Location = new System.Drawing.Point(113, 139);
             this.hire_dateDateTimePicker.Name = "hire_dateDateTimePicker";
             this.hire_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.hire_dateDateTimePicker.TabIndex = 12;
@@ -420,7 +420,7 @@
             // mobileTextBox
             // 
             this.mobileTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mobileTextBox.Location = new System.Drawing.Point(630, 226);
+            this.mobileTextBox.Location = new System.Drawing.Point(113, 251);
             this.mobileTextBox.Name = "mobileTextBox";
             this.mobileTextBox.Size = new System.Drawing.Size(200, 20);
             this.mobileTextBox.TabIndex = 20;
@@ -428,7 +428,7 @@
             // sallaryTextBox
             // 
             this.sallaryTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.sallaryTextBox.Location = new System.Drawing.Point(630, 140);
+            this.sallaryTextBox.Location = new System.Drawing.Point(113, 165);
             this.sallaryTextBox.Name = "sallaryTextBox";
             this.sallaryTextBox.Size = new System.Drawing.Size(200, 20);
             this.sallaryTextBox.TabIndex = 14;
@@ -436,7 +436,7 @@
             // bounusTextBox
             // 
             this.bounusTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bounusTextBox.Location = new System.Drawing.Point(630, 166);
+            this.bounusTextBox.Location = new System.Drawing.Point(113, 191);
             this.bounusTextBox.Name = "bounusTextBox";
             this.bounusTextBox.Size = new System.Drawing.Size(200, 20);
             this.bounusTextBox.TabIndex = 16;
@@ -445,7 +445,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowText;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(709, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 237);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -458,7 +458,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.linkLabel1.LinkVisited = true;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 22);
+            this.linkLabel1.Location = new System.Drawing.Point(744, 34);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(165, 13);
             this.linkLabel1.TabIndex = 44;
@@ -470,11 +470,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 513);
+            this.ClientSize = new System.Drawing.Size(944, 510);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bounusTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(bounusLabel);
@@ -506,7 +506,10 @@
             this.Controls.Add(this.birthdateDateTimePicker);
             this.Controls.Add(birthdateLabel);
             this.Controls.Add(avaliable_Absence_DaysLabel);
+            this.MaximizeBox = false;
             this.Name = "employee";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
             this.Text = "الموظفين";
             this.Load += new System.EventHandler(this.employee_Load);
             this.panel1.ResumeLayout(false);
