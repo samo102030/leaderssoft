@@ -6,8 +6,5 @@
 }
 
 namespace JBS2.johnDataSetTableAdapters {
-    
-    
-    public partial class Account_ManagmentTableAdapter {
-    }
+   
 }

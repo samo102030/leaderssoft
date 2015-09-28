@@ -21,7 +21,7 @@ namespace JBS2.BL
             
             DAL.open();
             DataTable dt = new DataTable();
-            dt = DAL.SelectData("Employee_login", param);
+            dt = DAL.SelectData("dbo.Employee_login", param);
             // فى حالة عدم وجود براميتير فى استرجاع البيانات ( على سبيل المثال عرض جميع الموظفين) ففى هذه الحالة نكتب null بدل param
             DAL.close();
             return dt;

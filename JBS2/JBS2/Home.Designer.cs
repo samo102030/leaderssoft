@@ -452,7 +452,6 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.Account_ManagmentTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BrandTableAdapter = null;
             this.tableAdapterManager.CurrencyTableAdapter = null;
