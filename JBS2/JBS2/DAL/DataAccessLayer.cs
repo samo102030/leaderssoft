@@ -14,7 +14,7 @@ namespace JBS2.DAL
         //this Constructor Inisialize the connection object
         public DataAccessLayer()
         {
-            sqlcon = new SqlConnection(@"Server=Jesus-PC; Database=john; Integrated Security= True");
+            sqlcon = new SqlConnection(@"Data Source=localhost;Initial Catalog=john;Integrated Security=True");
         }
         // method to open the connection
         public void open()
