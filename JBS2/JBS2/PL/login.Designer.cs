@@ -63,6 +63,7 @@
             this.Login_button.Text = "دخــــول";
             this.Login_button.UseVisualStyleBackColor = true;
             this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
+            this.Login_button.Enter += new System.EventHandler(this.Login_button_Click);
             // 
             // Cancel_button
             // 

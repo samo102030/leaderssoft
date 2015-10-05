@@ -58,6 +58,13 @@
             this.bill_NotesTextBox1 = new System.Windows.Forms.TextBox();
             this.closedCheckBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Item_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item_sale_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_current_cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_current_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.johnDataSet = new JBS2.johnDataSet();
@@ -93,14 +100,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.item_disc = new System.Windows.Forms.TextBox();
-            this.Item_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Item_sale_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_current_cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price_after_disc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.item_discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_after_disc = new System.Windows.Forms.TextBox();
+            this.total_item_after_disc = new System.Windows.Forms.TextBox();
             bill_out_IDLabel = new System.Windows.Forms.Label();
             cus_IDLabel = new System.Windows.Forms.Label();
             emp_IDLabel1 = new System.Windows.Forms.Label();
@@ -222,7 +222,7 @@
             // bill_NotesLabel1
             // 
             bill_NotesLabel1.AutoSize = true;
-            bill_NotesLabel1.Location = new System.Drawing.Point(498, 422);
+            bill_NotesLabel1.Location = new System.Drawing.Point(185, 507);
             bill_NotesLabel1.Name = "bill_NotesLabel1";
             bill_NotesLabel1.Size = new System.Drawing.Size(121, 13);
             bill_NotesLabel1.TabIndex = 68;
@@ -298,6 +298,28 @@
             item_IDLabel1.TabIndex = 79;
             item_IDLabel1.Text = "كود الصنف";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(471, 114);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(90, 17);
+            label4.TabIndex = 58;
+            label4.Text = "خصم الصنف";
+            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(384, 151);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(177, 17);
+            label5.TabIndex = 58;
+            label5.Text = "اجمالى الصنف بعد الخصم";
+            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bill_out_DateDateTimePicker
             // 
             this.bill_out_DateDateTimePicker.CustomFormat = "dd-MM-yyyy";
@@ -322,18 +344,21 @@
             this.bill_out_CostTextBox.TabIndex = 57;
             this.bill_out_CostTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bill_out_CostTextBox.TextChanged += new System.EventHandler(this.bill_out_CostTextBox_TextChanged);
+            this.bill_out_CostTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bill_out_CostTextBox_KeyUp);
             // 
             // bill_out_DiscountTextBox
             // 
             this.bill_out_DiscountTextBox.BackColor = System.Drawing.Color.Lime;
             this.bill_out_DiscountTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bill_out_DiscountTextBox.Location = new System.Drawing.Point(15, 231);
-            this.bill_out_DiscountTextBox.MaxLength = 3;
+            this.bill_out_DiscountTextBox.MaxLength = 4;
             this.bill_out_DiscountTextBox.Name = "bill_out_DiscountTextBox";
             this.bill_out_DiscountTextBox.Size = new System.Drawing.Size(79, 27);
             this.bill_out_DiscountTextBox.TabIndex = 59;
             this.bill_out_DiscountTextBox.TextChanged += new System.EventHandler(this.bill_out_DiscountTextBox_TextChanged);
             this.bill_out_DiscountTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bill_out_DiscountTextBox_KeyDown);
+            this.bill_out_DiscountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bill_out_DiscountTextBox_KeyPress);
+            this.bill_out_DiscountTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bill_out_DiscountTextBox_KeyUp);
             // 
             // bill_out_Discount_costTextBox
             // 
@@ -355,6 +380,7 @@
             this.bill_out_Cost_paidTextBox.Size = new System.Drawing.Size(131, 27);
             this.bill_out_Cost_paidTextBox.TabIndex = 63;
             this.bill_out_Cost_paidTextBox.TextChanged += new System.EventHandler(this.bill_out_Cost_paidTextBox_TextChanged);
+            this.bill_out_Cost_paidTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bill_out_Cost_paidTextBox_KeyPress);
             // 
             // bill_out_Cost_remainTextBox
             // 
@@ -404,9 +430,9 @@
             this.amount,
             this.Item_sale_Price,
             this.Total_current_cost1,
-            this.price_after_disc,
+            this.Total_current_cost,
             this.item_discount});
-            this.dataGridView1.Location = new System.Drawing.Point(372, 268);
+            this.dataGridView1.Location = new System.Drawing.Point(363, 275);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -417,6 +443,61 @@
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DataGridView1_RowPostPaint);
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // Item_Id
+            // 
+            this.Item_Id.FillWeight = 95.34532F;
+            this.Item_Id.HeaderText = "كود الصنف";
+            this.Item_Id.Name = "Item_Id";
+            this.Item_Id.ReadOnly = true;
+            // 
+            // Item_Name
+            // 
+            this.Item_Name.FillWeight = 99.06398F;
+            this.Item_Name.HeaderText = "اسم الصنف";
+            this.Item_Name.Name = "Item_Name";
+            this.Item_Name.ReadOnly = true;
+            this.Item_Name.Width = 200;
+            // 
+            // amount
+            // 
+            this.amount.FillWeight = 64.93463F;
+            this.amount.HeaderText = "الكمية";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            this.amount.Width = 68;
+            // 
+            // Item_sale_Price
+            // 
+            this.Item_sale_Price.FillWeight = 118.6892F;
+            this.Item_sale_Price.HeaderText = "سعر الصنف";
+            this.Item_sale_Price.Name = "Item_sale_Price";
+            this.Item_sale_Price.ReadOnly = true;
+            this.Item_sale_Price.Width = 80;
+            // 
+            // Total_current_cost1
+            // 
+            this.Total_current_cost1.FillWeight = 133.9712F;
+            this.Total_current_cost1.HeaderText = "الاجمالى";
+            this.Total_current_cost1.Name = "Total_current_cost1";
+            this.Total_current_cost1.ReadOnly = true;
+            this.Total_current_cost1.Width = 60;
+            // 
+            // Total_current_cost
+            // 
+            this.Total_current_cost.FillWeight = 87.92783F;
+            this.Total_current_cost.HeaderText = "اجمالى بعد الخصم";
+            this.Total_current_cost.Name = "Total_current_cost";
+            this.Total_current_cost.ReadOnly = true;
+            this.Total_current_cost.Width = 110;
+            // 
+            // item_discount
+            // 
+            this.item_discount.FillWeight = 90.78869F;
+            this.item_discount.HeaderText = "قيمه الخصم";
+            this.item_discount.Name = "item_discount";
+            this.item_discount.ReadOnly = true;
+            this.item_discount.Visible = false;
             // 
             // comboBox2
             // 
@@ -480,7 +561,7 @@
             // 
             this.item_genral_saleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Item_genral_sale", true));
             this.item_genral_saleTextBox.Location = new System.Drawing.Point(26, 59);
-            this.item_genral_saleTextBox.MaxLength = 8;
+            this.item_genral_saleTextBox.MaxLength = 9;
             this.item_genral_saleTextBox.Name = "item_genral_saleTextBox";
             this.item_genral_saleTextBox.Size = new System.Drawing.Size(80, 21);
             this.item_genral_saleTextBox.TabIndex = 77;
@@ -497,6 +578,7 @@
             this.total_sale_prise.Size = new System.Drawing.Size(120, 21);
             this.total_sale_prise.TabIndex = 77;
             this.total_sale_prise.TextChanged += new System.EventHandler(this.total_sale_prise_TextChanged);
+            this.total_sale_prise.KeyUp += new System.Windows.Forms.KeyEventHandler(this.total_sale_prise_KeyUp);
             // 
             // add_item
             // 
@@ -608,6 +690,7 @@
             // 
             // bill_out_IDTextBox
             // 
+            this.bill_out_IDTextBox.Enabled = false;
             this.bill_out_IDTextBox.Location = new System.Drawing.Point(129, 27);
             this.bill_out_IDTextBox.Name = "bill_out_IDTextBox";
             this.bill_out_IDTextBox.Size = new System.Drawing.Size(121, 21);
@@ -618,6 +701,7 @@
             this.emp_IDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "emp_ID", true));
             this.emp_IDComboBox.DataSource = this.employeeBindingSource;
             this.emp_IDComboBox.DisplayMember = "emp_ID";
+            this.emp_IDComboBox.Enabled = false;
             this.emp_IDComboBox.FormattingEnabled = true;
             this.emp_IDComboBox.Location = new System.Drawing.Point(129, 79);
             this.emp_IDComboBox.Name = "emp_IDComboBox";
@@ -657,6 +741,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.total_item_after_disc);
+            this.groupBox2.Controls.Add(this.item_disc);
             this.groupBox2.Controls.Add(this.item_IDTextBox);
             this.groupBox2.Controls.Add(item_IDLabel1);
             this.groupBox2.Controls.Add(this.item_genral_saleTextBox);
@@ -673,11 +759,9 @@
             this.groupBox2.Controls.Add(this.item_amountTextBox);
             this.groupBox2.Controls.Add(item_genral_saleLabel);
             this.groupBox2.Controls.Add(label1);
-            this.groupBox2.Controls.Add(this.total_after_disc);
-            this.groupBox2.Controls.Add(this.item_disc);
             this.groupBox2.Location = new System.Drawing.Point(435, 66);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(597, 182);
+            this.groupBox2.Size = new System.Drawing.Size(597, 203);
             this.groupBox2.TabIndex = 83;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -718,104 +802,22 @@
             // 
             // item_disc
             // 
-            this.item_disc.BackColor = System.Drawing.Color.Lime;
-            this.item_disc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item_disc.Location = new System.Drawing.Point(365, 112);
-            this.item_disc.MaxLength = 3;
+            this.item_disc.Location = new System.Drawing.Point(344, 118);
+            this.item_disc.MaxLength = 4;
             this.item_disc.Name = "item_disc";
-            this.item_disc.Size = new System.Drawing.Size(79, 27);
-            this.item_disc.TabIndex = 59;
-            this.item_disc.TextChanged += new System.EventHandler(this.bill_out_DiscountTextBox_TextChanged);
-            this.item_disc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bill_out_DiscountTextBox_KeyDown);
+            this.item_disc.Size = new System.Drawing.Size(100, 21);
+            this.item_disc.TabIndex = 84;
+            this.item_disc.TextChanged += new System.EventHandler(this.item_disc_TextChanged);
+            this.item_disc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.item_disc_KeyPress);
+            this.item_disc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.item_disc_KeyUp);
             // 
-            // label4
+            // total_item_after_disc
             // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(471, 114);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(90, 17);
-            label4.TabIndex = 58;
-            label4.Text = "خصم الصنف";
-            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Item_Id
-            // 
-            this.Item_Id.FillWeight = 95.34532F;
-            this.Item_Id.HeaderText = "كود الصنف";
-            this.Item_Id.Name = "Item_Id";
-            this.Item_Id.ReadOnly = true;
-            // 
-            // Item_Name
-            // 
-            this.Item_Name.FillWeight = 99.06398F;
-            this.Item_Name.HeaderText = "اسم الصنف";
-            this.Item_Name.Name = "Item_Name";
-            this.Item_Name.ReadOnly = true;
-            this.Item_Name.Width = 200;
-            // 
-            // amount
-            // 
-            this.amount.FillWeight = 64.93463F;
-            this.amount.HeaderText = "الكمية";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            this.amount.Width = 68;
-            // 
-            // Item_sale_Price
-            // 
-            this.Item_sale_Price.FillWeight = 118.6892F;
-            this.Item_sale_Price.HeaderText = "سعر الصنف";
-            this.Item_sale_Price.Name = "Item_sale_Price";
-            this.Item_sale_Price.ReadOnly = true;
-            this.Item_sale_Price.Width = 80;
-            // 
-            // Total_current_cost1
-            // 
-            this.Total_current_cost1.FillWeight = 133.9712F;
-            this.Total_current_cost1.HeaderText = "الاجمالى";
-            this.Total_current_cost1.Name = "Total_current_cost1";
-            this.Total_current_cost1.ReadOnly = true;
-            this.Total_current_cost1.Width = 60;
-            // 
-            // price_after_disc
-            // 
-            this.price_after_disc.FillWeight = 87.92783F;
-            this.price_after_disc.HeaderText = "اجمالى بعد الخصم";
-            this.price_after_disc.Name = "price_after_disc";
-            this.price_after_disc.ReadOnly = true;
-            this.price_after_disc.Width = 110;
-            // 
-            // item_discount
-            // 
-            this.item_discount.FillWeight = 90.78869F;
-            this.item_discount.HeaderText = "قيمه الخصم";
-            this.item_discount.Name = "item_discount";
-            this.item_discount.ReadOnly = true;
-            this.item_discount.Visible = false;
-            // 
-            // total_after_disc
-            // 
-            this.total_after_disc.BackColor = System.Drawing.Color.Lime;
-            this.total_after_disc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_after_disc.Location = new System.Drawing.Point(299, 145);
-            this.total_after_disc.MaxLength = 3;
-            this.total_after_disc.Name = "total_after_disc";
-            this.total_after_disc.Size = new System.Drawing.Size(79, 27);
-            this.total_after_disc.TabIndex = 59;
-            this.total_after_disc.TextChanged += new System.EventHandler(this.bill_out_DiscountTextBox_TextChanged);
-            this.total_after_disc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bill_out_DiscountTextBox_KeyDown);
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.Location = new System.Drawing.Point(384, 151);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(177, 17);
-            label5.TabIndex = 58;
-            label5.Text = "اجمالى الصنف بعد الخصم";
-            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.total_item_after_disc.Location = new System.Drawing.Point(268, 151);
+            this.total_item_after_disc.Name = "total_item_after_disc";
+            this.total_item_after_disc.Size = new System.Drawing.Size(100, 21);
+            this.total_item_after_disc.TabIndex = 85;
+            this.total_item_after_disc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.total_item_after_disc_KeyPress);
             // 
             // orders_out
             // 
@@ -915,14 +917,14 @@
         private System.Windows.Forms.TextBox bill_out_IDTextBox;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.TextBox item_IDTextBox;
-        private System.Windows.Forms.TextBox item_disc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item_sale_Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_current_cost1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price_after_disc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_current_cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn item_discount;
-        private System.Windows.Forms.TextBox total_after_disc;
+        private System.Windows.Forms.TextBox item_disc;
+        private System.Windows.Forms.TextBox total_item_after_disc;
     }
 }
