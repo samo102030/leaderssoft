@@ -25,6 +25,7 @@ namespace JBS2
 
         private void Login_button_Click(object sender, EventArgs e)
         {
+
             DataTable Dt = log.LOGIN(tex_User_Name.Text, tex_userpwd.Text);
             if (Dt.Rows.Count > 0)
             {

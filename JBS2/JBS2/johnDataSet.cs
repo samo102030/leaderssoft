@@ -5,6 +5,3 @@
     }
 }
 
-namespace JBS2.johnDataSetTableAdapters {
-   
-}

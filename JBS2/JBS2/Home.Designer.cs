@@ -75,13 +75,13 @@
             this.تتقاريرالاصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تقاريرالمخازنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeTableAdapter1 = new JBS2.johnDataSetTableAdapters.EmployeeTableAdapter();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.johnDataSet = new JBS2.johnDataSet();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new JBS2.johnDataSetTableAdapters.EmployeeTableAdapter();
-            this.tableAdapterManager = new JBS2.johnDataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager1 = new JBS2.johnDataSetTableAdapters.TableAdapterManager();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.johnDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -386,6 +386,7 @@
             this.اضافةموظفجديدToolStripMenuItem.Name = "اضافةموظفجديدToolStripMenuItem";
             this.اضافةموظفجديدToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.اضافةموظفجديدToolStripMenuItem.Text = "اضافة موظف جديد";
+            this.اضافةموظفجديدToolStripMenuItem.Click += new System.EventHandler(this.اضافةموظفجديدToolStripMenuItem_Click);
             // 
             // عرضوتعديلبياناتالموظفينToolStripMenuItem
             // 
@@ -436,39 +437,39 @@
             this.testToolStripMenuItem.Text = "TEST";
             this.testToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem2_Click);
             // 
+            // employeeTableAdapter1
+            // 
+            this.employeeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Employee";
+            this.bindingSource1.DataSource = this.johnDataSet;
+            // 
             // johnDataSet
             // 
             this.johnDataSet.DataSetName = "johnDataSet";
             this.johnDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // employeeBindingSource
+            // tableAdapterManager1
             // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.johnDataSet;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BrandTableAdapter = null;
-            this.tableAdapterManager.CurrencyTableAdapter = null;
-            this.tableAdapterManager.customersTableAdapter = null;
-            this.tableAdapterManager.Dameged_ItemTableAdapter = null;
-            this.tableAdapterManager.EmployeeTableAdapter = this.employeeTableAdapter;
-            this.tableAdapterManager.ItemsTableAdapter = null;
-            this.tableAdapterManager.Order_in_detailesTableAdapter = null;
-            this.tableAdapterManager.Order_Out_DetailsTableAdapter = null;
-            this.tableAdapterManager.Order_OutTableAdapter = null;
-            this.tableAdapterManager.Orders_inTableAdapter = null;
-            this.tableAdapterManager.paid_customerTableAdapter = null;
-            this.tableAdapterManager.paid_to_supplierTableAdapter = null;
-            this.tableAdapterManager.StoreTableAdapter = null;
-            this.tableAdapterManager.supplierTableAdapter = null;
-            this.tableAdapterManager.typesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = JBS2.johnDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.BrandTableAdapter = null;
+            this.tableAdapterManager1.CurrencyTableAdapter = null;
+            this.tableAdapterManager1.customersTableAdapter = null;
+            this.tableAdapterManager1.Dameged_ItemTableAdapter = null;
+            this.tableAdapterManager1.EmployeeTableAdapter = this.employeeTableAdapter1;
+            this.tableAdapterManager1.ItemsTableAdapter = null;
+            this.tableAdapterManager1.Order_in_detailesTableAdapter = null;
+            this.tableAdapterManager1.Order_Out_DetailsTableAdapter = null;
+            this.tableAdapterManager1.Order_OutTableAdapter = null;
+            this.tableAdapterManager1.Orders_inTableAdapter = null;
+            this.tableAdapterManager1.paid_customerTableAdapter = null;
+            this.tableAdapterManager1.paid_to_supplierTableAdapter = null;
+            this.tableAdapterManager1.StoreTableAdapter = null;
+            this.tableAdapterManager1.supplierTableAdapter = null;
+            this.tableAdapterManager1.typesTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = JBS2.johnDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Home_Page
             // 
@@ -487,11 +488,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الصفحة الرئيسية";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.johnDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,10 +499,6 @@
 
         #endregion
 
-        private johnDataSet johnDataSet;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
-        private johnDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
-        private johnDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ToolStripMenuItem الموردينToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem العملاءToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem عميلنقدىToolStripMenuItem;
@@ -549,6 +545,10 @@
         public System.Windows.Forms.ToolStripMenuItem إدارةالمصانعToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem عرضالخزنةالحاليةToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem تسجيلعمليةبيعToolStripMenuItem;
+        private johnDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private johnDataSet johnDataSet;
+        private johnDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
 
 
 

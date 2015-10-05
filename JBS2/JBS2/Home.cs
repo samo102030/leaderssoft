@@ -58,31 +58,24 @@ namespace JBS2
         private void brandBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-           // this.brandBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.johnDataSet);
+            this.bindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.johnDataSet);
 
         }
 
         private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.employeeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.johnDataSet);
+            this.bindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.johnDataSet);
 
         }
 
         private void employeeBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
-            this.employeeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.johnDataSet);
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'johnDataSet.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter.Fill(this.johnDataSet.Employee);
+            this.bindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.johnDataSet);
 
         }
 
@@ -215,6 +208,7 @@ namespace JBS2
         {
             nwlogin = null;
         }
+       
         TestBills tbs;
         private void tESTToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -235,6 +229,27 @@ namespace JBS2
 
             tbs = null;
             //	throw new NotImplementedException();
+        }
+        
+        employee frm_emp ;
+        private void اضافةموظفجديدToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (frm_emp == null)
+            {
+                frm_emp = new employee();
+                frm_emp.MdiParent = this;
+                frm_emp.FormClosed += new FormClosedEventHandler(frm_emp_FormClosed);
+                frm_emp.Show();
+            }
+            else
+                frm_emp.Activate();
+        }
+
+        void frm_emp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_emp = null;
+            //throw new NotImplementedException();
         }
       
     }
