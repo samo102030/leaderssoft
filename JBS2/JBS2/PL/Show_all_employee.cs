@@ -113,56 +113,56 @@ namespace JBS2.PL
             int ID;
             ID = int.Parse(emp_IDTextBox.Text);
 
-            try
-            {
-                byte[] Emp_pic;
-                if (Emp_pictureBox.Image == null)
-                {
-                    Emp_pic = new byte[0];
+            //try
+            //{
+            //    byte[] Emp_pic;
+            //    if (Emp_pictureBox.Image == null)
+            //    {
+            //        Emp_pic = new byte[0];
                    
-                    DialogResult update_dialoge=MessageBox.Show("سيتم التعديل دون وضع صورة", "انتبه", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    if (update_dialoge == DialogResult.OK)
-                    {
+            //        DialogResult update_dialoge=MessageBox.Show("سيتم التعديل دون وضع صورة", "انتبه", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //        if (update_dialoge == DialogResult.OK)
+            //        {
 
-                        johnDataSetTableAdapters.EmployeeTableAdapter edit_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
-                        edit_emp.Update_emp_without_image(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value,
-                            emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text), double.Parse(bounusTextBox.Text),
-                            phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text), int.Parse(avaliable_Absence_DaysTextBox.Text),
-                            notesTextBox.Text, emp_User_nameTextBox.Text, user_PwdTextBox.Text, Type_comboBox.Text, ID);
+            //            johnDataSetTableAdapters.EmployeeTableAdapter edit_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
+            //            edit_emp.Update_emp_without_image(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value,
+            //                emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text), double.Parse(bounusTextBox.Text),
+            //                phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text), int.Parse(avaliable_Absence_DaysTextBox.Text),
+            //                notesTextBox.Text, emp_User_nameTextBox.Text, user_PwdTextBox.Text, Type_comboBox.Text, ID);
 
-                        MessageBox.Show("تم التعديل بنجاح", "عملية التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Employee_list Empl = new Employee_list();
-                        Empl.DG_Employee.DataSource = Get_emp.Get_all_employee();
-                    }
-                    else
-                        return;
-                }
+            //            MessageBox.Show("تم التعديل بنجاح", "عملية التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            Employee_list Empl = new Employee_list();
+            //            Empl.DG_Employee.DataSource = Get_emp.Get_all_employee();
+            //        }
+            //        else
+            //            return;
+            //    }
 
-                //}
-                //}
-                else
-                {
-                    MemoryStream ms = new MemoryStream();
-                    Emp_pictureBox.Image.Save(ms, Emp_pictureBox.Image.RawFormat);
-                    Emp_pic = ms.ToArray();// the toarray function enable us to convert data stream to binary data 0,1
+            //    //}
+            //    //}
+            //    else
+            //    {
+            //        MemoryStream ms = new MemoryStream();
+            //        Emp_pictureBox.Image.Save(ms, Emp_pictureBox.Image.RawFormat);
+            //        Emp_pic = ms.ToArray();// the toarray function enable us to convert data stream to binary data 0,1
 
-                    johnDataSetTableAdapters.EmployeeTableAdapter edit_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
-                    edit_emp.Updet_emp_wz_img(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value,
-                        emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text),
-                        double.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text),
-                        int.Parse(avaliable_Absence_DaysTextBox.Text), Emp_pic, notesTextBox.Text, emp_User_nameTextBox.Text, user_PwdTextBox.Text,
-                        Type_comboBox.Text, ID);
+            //        johnDataSetTableAdapters.EmployeeTableAdapter edit_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
+            //        edit_emp.Updet_emp_wz_img(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text, birthdateDateTimePicker.Value,
+            //            emp_AddTextBox.Text, hire_dateDateTimePicker.Value, double.Parse(sallaryTextBox.Text),
+            //            double.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text, e_mailTextBox.Text, int.Parse(penalties_DaysTextBox.Text),
+            //            int.Parse(avaliable_Absence_DaysTextBox.Text), Emp_pic, notesTextBox.Text, emp_User_nameTextBox.Text, user_PwdTextBox.Text,
+            //            Type_comboBox.Text, ID);
 
-                    MessageBox.Show("تم التعديل بنجاح", "عملية التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        MessageBox.Show("تم التعديل بنجاح", "عملية التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Employee_list Empl = new Employee_list();
-                    Empl.DG_Employee.DataSource = Get_emp.Get_all_employee();
-                }
-            }
-            catch
-            {
-                return;
-            }
+            //        Employee_list Empl = new Employee_list();
+            //        Empl.DG_Employee.DataSource = Get_emp.Get_all_employee();
+            //    }
+            //}
+            //catch
+            //{
+            //    return;
+            //}
 
         }
 
@@ -171,36 +171,36 @@ namespace JBS2.PL
 
             DialogResult result;
             result = MessageBox.Show("هل تريد فعلا حذف " + "\n" + "أ/" + emp_nameTextBox.Text, "حذف موظف", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
-            {
-                johnDataSetTableAdapters.EmployeeTableAdapter del_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
+            //if (result == DialogResult.OK)
+            //{
+            //    johnDataSetTableAdapters.EmployeeTableAdapter del_emp = new johnDataSetTableAdapters.EmployeeTableAdapter();
 
-                del_emp.Employee_Delete(int.Parse(emp_IDTextBox.Text));
-                Emp_pictureBox.Image = null;
-                emp_IDTextBox.Clear();
-                emp_nameTextBox.Clear();
-                emp_Personal_IDTextBox.Clear();
-                birthdateDateTimePicker.ResetText();
-                emp_AddTextBox.Clear();
-                hire_dateDateTimePicker.ResetText();
-                sallaryTextBox.Clear();
-                bounusTextBox.Clear();
-                phoneTextBox.Clear();
-                mobileTextBox.Clear();
-                e_mailTextBox.Clear();
-                penalties_DaysTextBox.Clear();
-                avaliable_Absence_DaysTextBox.Clear();
-                notesTextBox.Clear();
-                user_PwdTextBox.Clear();
-                emp_User_nameTextBox.Clear();
-                Type_comboBox.ResetText();
-                MessageBox.Show("لقد تمت عملية الحذف بنجاح ", "حذف موظف", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            //    del_emp.Employee_Delete(int.Parse(emp_IDTextBox.Text));
+            //    Emp_pictureBox.Image = null;
+            //    emp_IDTextBox.Clear();
+            //    emp_nameTextBox.Clear();
+            //    emp_Personal_IDTextBox.Clear();
+            //    birthdateDateTimePicker.ResetText();
+            //    emp_AddTextBox.Clear();
+            //    hire_dateDateTimePicker.ResetText();
+            //    sallaryTextBox.Clear();
+            //    bounusTextBox.Clear();
+            //    phoneTextBox.Clear();
+            //    mobileTextBox.Clear();
+            //    e_mailTextBox.Clear();
+            //    penalties_DaysTextBox.Clear();
+            //    avaliable_Absence_DaysTextBox.Clear();
+            //    notesTextBox.Clear();
+            //    user_PwdTextBox.Clear();
+            //    emp_User_nameTextBox.Clear();
+            //    Type_comboBox.ResetText();
+            //    MessageBox.Show("لقد تمت عملية الحذف بنجاح ", "حذف موظف", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            }
-            else
-            {
-                return;
-            }
+            //}
+            //else
+            //{
+            //    return;
+            //}
         }
 
     }

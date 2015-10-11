@@ -47,41 +47,41 @@ namespace JBS2
             {
                 return;
             }
-            try
-            {
-                if (emp_pictureBox.Image == null)
-                {
-                    MessageBox.Show("سيتم الأضافة دون وضع صورة", "انتبه", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    johnDataSetTableAdapters.EmployeeTableAdapter Add_without_image = new johnDataSetTableAdapters.EmployeeTableAdapter();
-                    Add_without_image.Employee_wzout_img_Insert(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text,
-                                                             birthdateDateTimePicker.Value, emp_AddTextBox.Text
-                                                            , hire_dateDateTimePicker.Value, float.Parse(sallaryTextBox.Text),
-                                                            float.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text
-                                                            , e_mailTextBox.Text, int.Parse(peneltis_day_textBox.Text),
-                    int.Parse(available_peneltis_day_textBox.Text), Notes_textBox.Text, user_NameTextBox.Text, passwordTextBox.Text, emp_type_comboBox.Text);
-                    MessageBox.Show("لقد تمت الأضافة بنجاح", "عملية الأضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    try
+        //    {
+        //        if (emp_pictureBox.Image == null)
+        //        {
+        //            MessageBox.Show("سيتم الأضافة دون وضع صورة", "انتبه", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+        //            johnDataSetTableAdapters.EmployeeTableAdapter Add_without_image = new johnDataSetTableAdapters.EmployeeTableAdapter();
+        //            Add_without_image.Employee_wzout_img_Insert(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text,
+        //                                                     birthdateDateTimePicker.Value, emp_AddTextBox.Text
+        //                                                    , hire_dateDateTimePicker.Value, float.Parse(sallaryTextBox.Text),
+        //                                                    float.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text
+        //                                                    , e_mailTextBox.Text, int.Parse(peneltis_day_textBox.Text),
+        //            int.Parse(available_peneltis_day_textBox.Text), Notes_textBox.Text, user_NameTextBox.Text, passwordTextBox.Text, emp_type_comboBox.Text);
+        //            MessageBox.Show("لقد تمت الأضافة بنجاح", "عملية الأضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-            }
-            catch
-            {
-                return;
-            }
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        return;
+        //    }
 
-            MemoryStream ms = new MemoryStream();
-            emp_pictureBox.Image.Save(ms, emp_pictureBox.Image.RawFormat);
-            byte[] byte_image = ms.ToArray();// the toarray function enable us to convert data stream to binary data 0,1
+        //    MemoryStream ms = new MemoryStream();
+        //    emp_pictureBox.Image.Save(ms, emp_pictureBox.Image.RawFormat);
+        //    byte[] byte_image = ms.ToArray();// the toarray function enable us to convert data stream to binary data 0,1
 
-            johnDataSetTableAdapters.EmployeeTableAdapter addemp = new johnDataSetTableAdapters.EmployeeTableAdapter();
-            addemp.Employee_AddQuery(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text,
-                   birthdateDateTimePicker.Value, emp_AddTextBox.Text
-                , hire_dateDateTimePicker.Value, float.Parse(sallaryTextBox.Text),
-                float.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text
-                , e_mailTextBox.Text, int.Parse(peneltis_day_textBox.Text),
-                int.Parse(available_peneltis_day_textBox.Text), byte_image,
-                Notes_textBox.Text, user_NameTextBox.Text, passwordTextBox.Text, emp_type_comboBox.Text);
+        //    johnDataSetTableAdapters.EmployeeTableAdapter addemp = new johnDataSetTableAdapters.EmployeeTableAdapter();
+        //    addemp.Employee_AddQuery(emp_nameTextBox.Text, emp_Personal_IDTextBox.Text,
+        //           birthdateDateTimePicker.Value, emp_AddTextBox.Text
+        //        , hire_dateDateTimePicker.Value, float.Parse(sallaryTextBox.Text),
+        //        float.Parse(bounusTextBox.Text), phoneTextBox.Text, mobileTextBox.Text
+        //        , e_mailTextBox.Text, int.Parse(peneltis_day_textBox.Text),
+        //        int.Parse(available_peneltis_day_textBox.Text), byte_image,
+        //        Notes_textBox.Text, user_NameTextBox.Text, passwordTextBox.Text, emp_type_comboBox.Text);
 
-            MessageBox.Show("لقد تمت الأضافة بنجاح", "عملية الأضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    MessageBox.Show("لقد تمت الأضافة بنجاح", "عملية الأضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
