@@ -73,13 +73,13 @@ namespace JBS2
 
         void itemDisc()
         {
-            if (item_disc.Text != string.Empty && total_sale_prise.Text != string.Empty)
-            {
-                double discaount = Convert.ToInt32(item_disc.Text);
-                double amount = Convert.ToInt32(total_sale_prise.Text);
-                double totalAmount = amount - (amount * (discaount / 100));
-                total_item_after_disc.Text = totalAmount.ToString();
-            }
+            //if (item_disc.Text != string.Empty && total_sale_prise.Text != string.Empty)
+            //{
+            //    double discaount = Convert.ToInt32(item_disc.Text);
+            //    double amount = Convert.ToInt32(total_sale_prise.Text);
+            //    double totalAmount = amount - (amount * (discaount / 100));
+            //    total_item_after_disc.Text = totalAmount.ToString();
+            //}
         }
         private void orders_out_Load(object sender, EventArgs e)
         {
@@ -87,8 +87,8 @@ namespace JBS2
             this.employeeTableAdapter.Fill(this.johnDataSet.Employee);
             // TODO: This line of code loads data into the 'johnDataSet.Order_Out' table. You can move, or remove it, as needed.
             this.order_OutTableAdapter.Fill(this.johnDataSet.Order_Out);
-// TODO: This line of code loads data into the 'johnDataSet.customers' table. You can move, or remove it, as needed.
-this.customersTableAdapter.Fill(this.johnDataSet.customers);
+            // TODO: This line of code loads data into the 'johnDataSet.customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.johnDataSet.customers);
             // TODO: This line of code loads data into the 'johnDataSet.Order_in_detailes' table. You can move, or remove it, as needed.
             this.order_in_detailesTableAdapter.Fill(this.johnDataSet.Order_in_detailes);
             // TODO: This line of code loads data into the 'johnDataSet.Order_Out_Details' table. You can move, or remove it, as needed.
@@ -99,8 +99,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             //this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.datagridview1_RowPostPaint);
 
             timer1.Start();
-            
-            
+
+
             //this code make combobox search like google
             comboBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox2.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -108,8 +108,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             customer_nameComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             customer_nameComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-        
-            
+
+
             //int cellnum = 0;
             //int rownum = 0;
             //foreach(DataGridViewRow row in dataGridView1.Rows)
@@ -118,8 +118,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             //    dataGridView1.Rows[rownum].Cells[0].Value = cellnum;
             //    rownum = rownum + 1;
             //}
-            }
-        
+        }
+
 
         private void total_sale_prise_TextChanged(object sender, EventArgs e)
         {
@@ -141,7 +141,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             //    total_sale_prise.Text = (Convert.ToInt32(item_genral_saleTextBox.Text) * Convert.ToInt32(amountsale.Text)).ToString();
 
             if (!string.IsNullOrEmpty(item_genral_saleTextBox.Text) && !string.IsNullOrEmpty(amountsale.Text))
-                total_sale_prise.Text = (float.Parse (item_genral_saleTextBox.Text) * Convert.ToInt32(amountsale.Text)).ToString();
+                total_sale_prise.Text = (float.Parse(item_genral_saleTextBox.Text) * Convert.ToInt32(amountsale.Text)).ToString();
 
 
 
@@ -157,12 +157,12 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void add_item_Click(object sender, EventArgs e)
         {
-           // johnDataSetTableAdapters.Order_OutTableAdapter orout= new johnDataSetTableAdapters.Order_OutTableAdapter();
-           //orout.Oreder_out_InsertQuery(
-           // string store_num = store_IDTextBox.Text;
-           // string store_name = store_NameTextBox.Text;
-           // string[] row = { store_num, store_name };
-           // store_view.Rows.Add(row);
+            // johnDataSetTableAdapters.Order_OutTableAdapter orout= new johnDataSetTableAdapters.Order_OutTableAdapter();
+            //orout.Oreder_out_InsertQuery(
+            // string store_num = store_IDTextBox.Text;
+            // string store_name = store_NameTextBox.Text;
+            // string[] row = { store_num, store_name };
+            // store_view.Rows.Add(row);
 
             //for (int s = 0; s < dataGridView1.Rows.Count - 1; s++)
             //{
@@ -177,10 +177,10 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 if (item_IDTextBox.Text == dataGridView1.Rows[i].Cells[0].Value.ToString())
-                     {
-                         MessageBox.Show("هذا المنتج موجود مسبقا");
-                          return;
-                     }
+                {
+                    MessageBox.Show("هذا المنتج موجود مسبقا");
+                    return;
+                }
             }
 
 
@@ -190,9 +190,9 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
                 return;
             }
 
-           else if (String.IsNullOrEmpty(amountsale.Text) )
+            else if (String.IsNullOrEmpty(amountsale.Text))
             {
-                MessageBox.Show("قم بإدخال الكمية المطلوبة","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("قم بإدخال الكمية المطلوبة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 
             }
@@ -203,7 +203,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             else
             {
                 total_item_after_disc.Text = ((100.0 - float.Parse(item_disc.Text)) * (float.Parse(total_sale_prise.Text) / 100.0)).ToString();
-            
+
             }
 
             //else if (string.IsNullOrEmpty(bill_out_DiscountTextBox.Text))
@@ -224,63 +224,63 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             {
                 //if (!float.Parse(bill_out_DiscountTextBox.Text))
                 //{
-                    string Item_Id = item_IDTextBox.Text;
-                    //string bill_date = bill_out_DateDateTimePicker.Text;
-                    string Item_Name = comboBox2.Text;
-                    //string Item_buy_price = item_Buy_PriceTextBox.Text;
-                    string Item_sale_Price = item_genral_saleTextBox.Text;
-                    string amount = amountsale.Text;
-                     
-
-                    //float Total_current_cost = (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
-                    //float Total_current_cost_discount = ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text))) * float.Parse(bill_out_DiscountTextBox.Text) / 100;
-                    //Total_current_cost -= Total_current_cost_discount;
-                    //string Total_current_cost1 = Total_current_cost.ToString();
-
-                    ////float Total_current_cost_after_Adding = Total_current_cost + ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text)));
-                    ////string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
-
-                    //string[] row = { bill_date, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost_discount.ToString(), bill_out_DiscountTextBox.Text };
-                    //dataGridView1.Rows.Add(row);
+                string Item_Id = item_IDTextBox.Text;
+                //string bill_date = bill_out_DateDateTimePicker.Text;
+                string Item_Name = comboBox2.Text;
+                //string Item_buy_price = item_Buy_PriceTextBox.Text;
+                string Item_sale_Price = item_genral_saleTextBox.Text;
+                string amount = amountsale.Text;
 
 
+                //float Total_current_cost = (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
+                //float Total_current_cost_discount = ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text))) * float.Parse(bill_out_DiscountTextBox.Text) / 100;
+                //Total_current_cost -= Total_current_cost_discount;
+                //string Total_current_cost1 = Total_current_cost.ToString();
 
-                
-                    //float Total_current_cost;
-                    //float Total_current_cost= (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
+                ////float Total_current_cost_after_Adding = Total_current_cost + ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text)));
+                ////string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
 
-                    string Total_current_cost = total_item_after_disc.Text;
-                        //((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text))) * float.Parse(item_disc.Text) / 100;
-                    //Total_current_cost -= Total_current_cost_discount;
-                    string Total_current_cost1 = total_sale_prise.Text;
-                    //string price_after_disc = Total_current_cost1 - (Total_current_cost1 * (int.Parse(item_disc.Text) / 100));
-
-                    //float Total_current_cost_after_Adding = Total_current_cost + ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text)));
-                    //string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
+                //string[] row = { bill_date, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost_discount.ToString(), bill_out_DiscountTextBox.Text };
+                //dataGridView1.Rows.Add(row);
 
 
-                    string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost.ToString() };
-                    dataGridView1.Rows.Add(row);
-
-                    //string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, price_after_disc };
-                    //dataGridView1.Rows.Add(row);
 
 
-                    //here we will the sum of all items in this bill
-                    double sum = 0;
-                    for (int i = 0; i < dataGridView1.Rows.Count; ++i)
-                    {
-                        sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
-                    }
-                    bill_out_CostTextBox.Text = sum.ToString();
+                //float Total_current_cost;
+                //float Total_current_cost= (int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text));
 
-               
-                    
-                    //MessageBox.Show(sum.ToString());
+                string Total_current_cost = total_item_after_disc.Text;
+                //((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text))) * float.Parse(item_disc.Text) / 100;
+                //Total_current_cost -= Total_current_cost_discount;
+                string Total_current_cost1 = total_sale_prise.Text;
+                //string price_after_disc = Total_current_cost1 - (Total_current_cost1 * (int.Parse(item_disc.Text) / 100));
+
+                //float Total_current_cost_after_Adding = Total_current_cost + ((int.Parse(amountsale.Text)) * (float.Parse(item_genral_saleTextBox.Text)));
+                //string Total_current_cost_after_Adding2 = Total_current_cost_after_Adding.ToString();
+
+
+                string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, Total_current_cost.ToString() };
+                dataGridView1.Rows.Add(row);
+
+                //string[] row = { Item_Id, Item_Name, amount, Item_sale_Price, Total_current_cost1, price_after_disc };
+                //dataGridView1.Rows.Add(row);
+
+
+                //here we will the sum of all items in this bill
+                double sum = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+                {
+                    sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
                 }
-               
-            
-             //amountsale.Text = string.Empty;
+                bill_out_CostTextBox.Text = sum.ToString();
+
+
+
+                //MessageBox.Show(sum.ToString());
+            }
+
+
+            //amountsale.Text = string.Empty;
             amountsale.Clear();
             bill_out_DiscountTextBox.Clear();
             bill_out_Discount_costTextBox.Clear();
@@ -295,9 +295,9 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             //item_IDComboBox.ResetText();
 
             comboBox2.Focus();
-        
-                
-                
+
+
+
             //}
         }
 
@@ -308,14 +308,14 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void bill_out_Cost_paidTextBox_TextChanged(object sender, EventArgs e)
         {
-            //if (!string.IsNullOrEmpty(bill_out_Cost_paidTextBox.Text) && string.IsNullOrEmpty(bill_out_Discount_costTextBox.Text))
-            //{
-            //    bill_out_Discount_costTextBox.Text = "0";
-            //}
-            //else
-            //{
-            //    bill_out_Cost_remainTextBox.Text = (float.Parse(bill_out_Discount_costTextBox.Text) - float.Parse(bill_out_Cost_paidTextBox.Text)).ToString();
-            //}
+            if (string.IsNullOrEmpty(bill_out_Cost_paidTextBox.Text) && string.IsNullOrEmpty(bill_out_Discount_costTextBox.Text))
+            {
+                bill_out_Discount_costTextBox.Text = bill_out_CostTextBox.Text;
+            }
+            else
+            {
+                bill_out_Cost_remainTextBox.Text = (float.Parse(bill_out_Discount_costTextBox.Text) - float.Parse(bill_out_Cost_paidTextBox.Text)).ToString();
+            }
         }
 
         private void bill_out_Discount_costTextBox_TextChanged(object sender, EventArgs e)
@@ -323,7 +323,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
             //if (!string.IsNullOrEmpty(bill_out_DiscountTextBox.Text) && !string.IsNullOrEmpty(bill_out_CostTextBox.Text))
             //    bill_out_Discount_costTextBox.Text = ((Convert.ToInt32(bill_out_DiscountTextBox.Text) / 100) * Convert.ToInt32(bill_out_CostTextBox.Text)).ToString();
-            
+
             //double d;
             //double di;
             //double i;
@@ -334,17 +334,17 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         }
 
-    
+
         private void bill_out_DiscountTextBox_TextChanged(object sender, EventArgs e)
         {
             //if (!string.IsNullOrEmpty(bill_out_DiscountTextBox.Text) && !string.IsNullOrEmpty(bill_out_CostTextBox.Text))
             //    bill_out_Discount_costTextBox.Text = (Convert.ToInt32(bill_out_CostTextBox.Text) - (Convert.ToInt32(bill_out_DiscountTextBox.Text) / 100.0) * Convert.ToInt32(bill_out_CostTextBox.Text)).ToString();
 
 
-            //if (string.IsNullOrEmpty(bill_out_DiscountTextBox.Text) && !string.IsNullOrEmpty(bill_out_CostTextBox.Text))
+            //if (string.IsNullOrEmpty(bill_out_DiscountTextBox.Text) && string.IsNullOrEmpty(bill_out_CostTextBox.Text))
             //{
             //    //bill_out_DiscountTextBox.Text.Trim();
-            //    bill_out_DiscountTextBox.Text = "0";
+            //    bill_out_DiscountTextBox.Text = bill_out_CostTextBox.Text;
             //}
             //else
             //{
@@ -367,17 +367,18 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             }
             item_disc.Clear();
             total_item_after_disc.Clear();
+            //bill_out_DiscountTextBox.Clear();
 
         }
 
         private void save_bill_Click(object sender, EventArgs e)
         {
-            
 
-             //    // Get the employee ID from login
-        //    int Get_Emp_id;
-        //    johnDataSetTableAdapters.EmployeeTableAdapter get_ID = new johnDataSetTableAdapters.EmployeeTableAdapter();
-        //    Get_Emp_id = Convert.ToInt32(get_ID.Employee_Get_ID_ScalarQuery(emp_nameComboBox.Text));
+
+            //    // Get the employee ID from login
+            //    int Get_Emp_id;
+            //    johnDataSetTableAdapters.EmployeeTableAdapter get_ID = new johnDataSetTableAdapters.EmployeeTableAdapter();
+            //    Get_Emp_id = Convert.ToInt32(get_ID.Employee_Get_ID_ScalarQuery(emp_nameComboBox.Text));
 
             // Get the Customer ID from combobox
             int Cust_ID = 0;
@@ -410,20 +411,20 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             }
             else
             {
-                 // no row error
+                // no row error
             }
             con.Close();
 
             get_last_id();
-        //    //here we will insert in table " order out
-        //    // " then we will make procedure to get Max ID in "bill out " table
-        //    johnDataSetTableAdapters.Order_OutTableAdapter Add_bill = new johnDataSetTableAdapters.Order_OutTableAdapter();
-        //    Add_bill.Order_Out_InsertQuery(Get_Cust_ID, Get_Emp_id, bill_out_DateDateTimePicker.Value, float.Parse(Bill_Out_label.Text), bill_out_DiscountTextBox.Text, float.Parse(bill_out_Discount_costTextBox.Text), float.Parse(bill_out_Cost_paidTextBox.Text), remain, bill_NotesTextBox.Text);
+            //    //here we will insert in table " order out
+            //    // " then we will make procedure to get Max ID in "bill out " table
+            //    johnDataSetTableAdapters.Order_OutTableAdapter Add_bill = new johnDataSetTableAdapters.Order_OutTableAdapter();
+            //    Add_bill.Order_Out_InsertQuery(Get_Cust_ID, Get_Emp_id, bill_out_DateDateTimePicker.Value, float.Parse(Bill_Out_label.Text), bill_out_DiscountTextBox.Text, float.Parse(bill_out_Discount_costTextBox.Text), float.Parse(bill_out_Cost_paidTextBox.Text), remain, bill_NotesTextBox.Text);
 
-        //    // here we will Get the last ID inserted in order out 
-        //    int Get_MAX_ID;
-        //    johnDataSetTableAdapters.Order_OutTableAdapter Get_max_ID = new johnDataSetTableAdapters.Order_OutTableAdapter();
-        //    Get_MAX_ID = Convert.ToInt32(Get_max_ID.Order_Out_Get_Max_ID_ScalarQuery());
+            //    // here we will Get the last ID inserted in order out 
+            //    int Get_MAX_ID;
+            //    johnDataSetTableAdapters.Order_OutTableAdapter Get_max_ID = new johnDataSetTableAdapters.Order_OutTableAdapter();
+            //    Get_MAX_ID = Convert.ToInt32(Get_max_ID.Order_Out_Get_Max_ID_ScalarQuery());
 
             String query = "INSERT INTO Order_Out ( cus_ID,emp_ID,Bill_out_Date,Bill_out_Cost,Bill_out_Discount,Bill_out_Discount_cost,Bill_out_Cost_paid,Bill_out_Cost_remain,Is_return,Bill_Notes,closed) VALUES(@cus_ID,@emp_ID,@Bill_out_Date,@Bill_out_Cost,@Bill_out_Discount,@Bill_out_Discount_cost,@Bill_out_Cost_paid,@Bill_out_Cost_remain,@Is_return,@Bill_Notes,@closed)";
 
@@ -566,7 +567,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
             item_amountTextBox.Clear();
             item_disc.Clear();
             total_item_after_disc.Clear();
-         
+
         }
 
         int count = 0;
@@ -596,8 +597,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
             var headerBounds = new Rectangle(e.RowBounds.Right + e.RowBounds.Left - grid.RowHeadersWidth, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
             e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, rightformat);
-            
- 
+
+
             //var headerBounds As Rectangle = New Rectangle(e.RowBounds.Left + e.RowBounds.Right - grid.RowHeadersWidth, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height)
             //e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
 
@@ -611,8 +612,8 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            
+
+
 
         }
 
@@ -623,7 +624,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void amountsale_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar!=8)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
             {
                 e.Handled = true;
             }
@@ -631,7 +632,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void item_genral_saleTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator))
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator))
             {
                 e.Handled = true;
             }
@@ -649,11 +650,11 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
         {
             if (e.KeyCode == Keys.Enter && amountsale.Text != string.Empty)
             {
-               item_genral_saleTextBox.Focus();
+                item_genral_saleTextBox.Focus();
             }
         }
 
-      
+
         private void item_genral_saleTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && item_genral_saleTextBox.Text != string.Empty)
@@ -680,7 +681,7 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
                 amountsale.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 item_genral_saleTextBox.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 total_sale_prise.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                bill_out_DiscountTextBox.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                total_item_after_disc.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
                 dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                 amountsale.Focus();
             }
@@ -717,20 +718,20 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void item_Discount_rateTextBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void item_disc_TextChanged(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(item_disc.Text) && !string.IsNullOrEmpty(total_sale_prise.Text))
-            //{
-            //    //bill_out_DiscountTextBox.Text.Trim();
-            //    item_disc.Text = "0";
-            //}
-            //else
-            //{
-            //    total_item_after_disc.Text = ((100.0 - float.Parse(item_disc.Text)) * (float.Parse(total_sale_prise.Text) / 100.0)).ToString();
-            //}
+            if (string.IsNullOrEmpty(item_disc.Text) && string.IsNullOrEmpty(total_sale_prise.Text))
+            {
+                //bill_out_DiscountTextBox.Text.Trim();
+                item_disc.Text = total_sale_prise.Text;
+            }
+            else
+            {
+                total_item_after_disc.Text = ((100.0 - float.Parse(item_disc.Text)) * (float.Parse(total_sale_prise.Text) / 100.0)).ToString();
+            }
         }
 
         private void item_disc_KeyPress(object sender, KeyPressEventArgs e)
@@ -777,15 +778,15 @@ this.customersTableAdapter.Fill(this.johnDataSet.customers);
 
         private void total_sale_prise_KeyUp(object sender, KeyEventArgs e)
         {
-            itemDisc();
+            //itemDisc();
         }
 
         private void item_disc_KeyUp(object sender, KeyEventArgs e)
         {
-            itemDisc();
+            //itemDisc();
         }
 
-       
+
 
         //private void add_item_KeyDown(object sender, KeyEventArgs e)
         //{
